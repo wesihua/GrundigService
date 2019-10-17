@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>签单管理</title>
+<link href="../css/public.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet"/>
+<link href="../datepicker/css/datepicker.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage-box1.css" rel="stylesheet"/>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<!-- <script src="../js/common.js"></script>  -->
+<script src="../js/signing/demand.processing.js"></script>
+
+</head>
+<body>
+	<div id="content">
+		<div id="qiandan-manage">
+			<div class="public-single-page-nav">
+				<span class="title">处理中需求单</span> 
+				<!-- <span class="public-small-bottom" onclick="addDemand()"><i class="fa fa-plus"></i>新增需求单</span> -->
+				<span class="public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+			</div>
+			<div class="qiandan-content">
+				<div class="wait-handle" >
+					<div class="search-area clearFix">
+						
+						<div class="lenove-area">
+							<input placeholder="企业名称" class="" id="companyName" name="companyName"/>
+						</div>
+						
+						<div class="lenove-area">
+							<input placeholder="招聘编号" class="" id="demandNo" name="demandNo"/>
+						</div>
+						<div class="c-datepicker-date-editor J-datepicker-range mt10">
+				          <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+				          <input placeholder="创建开始时间" name="" style="width: 140px;" class="c-datepicker-data-input" id="beginTime"/>-
+				          <input placeholder="创建结束时间" name="" style="width: 140px;" class="c-datepicker-data-input" id="endTime"/>
+				        </div>
+						
+						<span id="query-bottom" class="public-small-bottom h42"><i class="fa fa-search"></i>查询</span>
+						<input name="state" type="hidden" value="1"/>
+					</div>
+					<div class="table-area">
+						<table cellpadding="0" cellspacing="0">
+						</table>
+					</div>
+
+					<!-- 分页处理部分 -->
+					<div class="public-fanye">
+						<span class="result" id="totalCount"></span>
+						<div class="f-content">
+							<div id="pagination1" class="page fl"></div>
+							<div class="info fl">
+								<p>
+									当前页数：<span id="current1">1</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

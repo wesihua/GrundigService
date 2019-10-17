@@ -1,0 +1,59 @@
+#qiandan-qianyue .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px;
+  margin-bottom: 15px; }
+  #qiandan-qianyue .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#qiandan-qianyue .qiandan-add-content {
+  padding: 0px 20px; }
+  #qiandan-qianyue .qiandan-add-content .input-block {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+    min-height: 40px; }
+    #qiandan-qianyue .qiandan-add-content .input-block .name {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 40px;
+      line-height: 40px;
+      width: 80px; }
+    #qiandan-qianyue .qiandan-add-content .input-block .time {
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #f8f8f8; }
+    #qiandan-qianyue .qiandan-add-content .input-block .word {
+      line-height: 40px;
+      width: 500px; }
+  #qiandan-qianyue .qiandan-add-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-qianyue .qiandan-add-content .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiandan-qianyue .qiandan-add-content .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiandan-qianyue .qiandan-add-content .table-area table tr td .delete, #qiandan-qianyue .qiandan-add-content .table-area table tr td .des, #qiandan-qianyue .qiandan-add-content .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;color: #5595d6; }
+
+  #qiandan-qianyue .qiandan-add-content .control-botton {
+    padding-top: 40px;
+    text-align: center; }
+    #qiandan-qianyue .qiandan-add-content .control-botton span {
+      margin: 0px 40px; }

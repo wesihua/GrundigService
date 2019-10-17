@@ -1,0 +1,84 @@
+#account-manage .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; 
+  margin-bottom: 20px;
+}
+  #account-manage .a-m-nav .title{
+    font-weight: bold; 
+      font-size:16px;
+  }
+  #account-manage .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    margin-top:13px;
+    cursor: pointer; }
+
+#account-manage .a-m-content {
+  padding: 0px 20px; }
+  #account-manage .a-m-content .input-area {
+    /* height: 80px; */
+    /* line-height: 80px;  */
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+  }
+    #account-manage .a-m-content .input-area .pt, #account-manage .a-m-content .input-area .se {
+      width: 200px;
+      height: 30px;
+      color: #666666;
+      margin-right: 20px; 
+      background-color: #ffffff;
+      vertical-align: top;
+    }
+    #account-manage .a-m-content .input-area .se option {
+      height:32px;
+      line-height: 32px; }
+
+      #account-manage .a-m-content .input-area .c-datepicker-date-editor{
+        height: 32px !important;
+        line-height: 32px !important;
+      }
+      #account-manage .a-m-content .input-area .c-datepicker-date-editor .c-datepicker-data-input{
+        width:100px;
+        text-indent:0px;
+      }
+      #account-manage .a-m-content .input-area .public-small-bottom{
+        vertical-align: top;
+        margin-left:20px;
+      }
+    /* #account-manage .a-m-content .input-area #public-bottom2 {
+      float: right;
+      margin-top: 20px; } */
+  #account-manage .a-m-content table {
+    width: 100%;
+    border-collapse: collapse; }
+    #account-manage .a-m-content table tr th {
+      text-align: center;
+      height: 35px;
+      font-weight: bold;
+      color: #888888;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+    #account-manage .a-m-content table tr td {
+      text-align: center;
+      height: 35px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #account-manage .a-m-content table tr td .delete, #account-manage .a-m-content table tr td .des {
+        margin: 0px 5px;
+        cursor: pointer; 
+      color: #5595d6;}
+.change_pass{
+	border: 0px solid red;
+	margin-right: 10px;
+	color:#555555;
+}      
+.change_pass:hover{
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}

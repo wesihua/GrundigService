@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>国文人力</title>
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/nav.css" rel="stylesheet" />
+<link href="css/home.css" rel="stylesheet" />
+
+<link href="css/public-box1.css" rel="stylesheet" />
+<link href="css/public-box2.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/public-loading.css" rel="stylesheet" />
+
+<link href="css/user-manage-box3.css" rel="stylesheet" />
+<link href="css/qiandan-manage-box3.css" rel="stylesheet" />
+
+<link href="../css/juese-manage-box1.css" rel="stylesheet"/>
+
+<link href="../css/user-manage-box.css" rel="stylesheet"/>
+<link href="../css/user-manage-box2.css" rel="stylesheet"/>
+
+<link href="../css/account-manage-box1.css" rel="stylesheet"/>
+<link href="../css/gongzhong-peizhi-box1.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage-box1.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage-box2.css" rel="stylesheet" />
+<link href="../css/juese-manage-box2.css" rel="stylesheet"/>
+<link href="../css/select-menu-box.css" rel="stylesheet" />
+<link rel="stylesheet" href="../datepicker/css/datepicker.css" />
+<link rel="stylesheet" href="../selectivity/selectivity-jquery.css"/>
+<link href="../css/account-manage.css" rel="stylesheet"/>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../selectivity/selectivity-jquery.js"></script>
+<script src="js/home.js"></script>
+
+
+
+<link href="../css/qiandan-qianyue-add.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet"/>
+<script src="../js/jquery.pagination.min.js"></script>
+
+
+<link href="../css/add-gz-box.css" rel="stylesheet" />
+<link href="../css/add-worker-box.css" rel="stylesheet"/>
+
+</head>
+<body>
+<input type="hidden" id="userId"/>
+<input type="hidden" id="roleId"/>
+	<div id="header">
+		<div class="header-content">
+			<img class="logo" src="../image/logo.png" /><span class="logo-word">国文人力</span>
+			<div class="person-info">
+				<span class="name" id="userName"></span><span class="change_pass" id="user-change-pass">修改密码</span> <span class="login-out" id="logout"><i class="fa fa-sign-out"></i>退出</span>
+			</div>
+
+		</div>
+	</div>
+	<div id="main">
+		<div id="nav"></div>
+		<!-- <div id="content"> -->
+		<div>
+			<iframe name="content" id="myframe" frameborder="0" scrolling="yes" 
+				width="100%"  src="welcome.html" onload="handleFrame(this,event)"></iframe>
+		</div>
+	</div>
+<!--******************************* 以下是弹窗html代码块 *******************************************************************-->	
+	<!-- alert提示框 -->
+	<div id="public-box2" style="display:none;z-index:1000">
+		<div class="mask"></div>
+		<div class="box-content">
+			<div class="head"><span class="title">提示</span><span class="close fa fa-close" id="alert_close"></span></div>
+			<div class="middle">
+				<div class="box-word" id="alert_msg">提示文字</div>
+			</div>
+			<div class="bottom">
+				<span id="public-bottom2" class="alert_sure">确定</span>
+			</div>
+		</div>
+	</div>
+	<!-- confirm提示框 -->
+	<div id="public-box1" style="display:none;z-index:1000">
+		<div class="mask"></div>
+		<div class="box-content">
+			<div class="head"><span class="title">提示</span><span class="close fa fa-close" id="confirm_close"></span></div>
+			<div class="middle">
+				<div class="box-word" id="confirm_msg">提示文字</div>
+			</div>
+			<div class="bottom">
+				<span id="public-bottom1">取消</span>
+				<span id="public-bottom2" class="confirm_sure">确定</span>
+			</div>
+		</div>
+	</div>
+	<!-- 业务逻辑弹窗 -->
+	<div id="dialog" style="display:none;z-index:9"></div>
+	
+	<!-- loading -->
+	<div class="public-loading" id="loading" style="display:none;z-index:1000">
+		<div class="mask"></div>
+		<div class="loading">
+				<i class="fa fa-spinner fa-spin"></i>
+		</div>
+	</div>
+<!--******************************* 以上是弹窗html代码块 *******************************************************************-->	
+
+<!--******************************* 修改密码代码块 *******************************************************************-->
+<div id="change-user-pass" style="display:none;">
+	<div id="account-manage-box1">
+		<div class="mask"></div>
+		<div class="box1-content">
+			<div class="head"><span class="title">修改密码</span><span class="close fa fa-close" id="close-user-pass-dialog"></span></div>
+			<div class="middle">
+				<ul>
+					<li><span class="name"><i style="color:red;">*</i>登录人</span><input class="pt" readonly="readonly" id="real_name" style="color:#666666;"/></li>
+					<li><span class="name"><i style="color:red;">*</i>原密码</span><input class="pt" type="password" placeholder="输入旧密码" id="old_pass"/></li>
+					<li><span class="name"><i style="color:red;">*</i>新密码</span><input class="pt" type="password" placeholder="填写新密码" id="new_pass"/></li>
+					<li><span class="name">确认密码</span><input class="pt" type="password" placeholder="再次确认新密码" id="re_pass"/></li>
+				</ul>
+			</div>
+			<div class="bottom">
+				<span id="public-bottom1" class="public-bottom1 cancel-user-pass-dialog">取消</span>
+				<span id="public-bottom2" class="public-bottom2 on edit-user-pass">确定</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

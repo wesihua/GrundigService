@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>用工录入统计</title>
+
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/reportForm.css" rel="stylesheet" />
+<link href="css/jquery.pagination.css" rel="stylesheet" />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.pagination.min.js"></script>
+<script src="charts/highcharts.js"></script>
+<script src="charts/exporting.js"></script>
+<script src="charts/export-data.js"></script>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css" />
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="js/report/orderReport.js"></script>
+
+</head>
+<body>
+
+	<div id="content" class="clearFix">
+		<div id="reportForm">
+			<div class="public-single-page-nav">
+				<span class="title">签约报表</span>
+				<!--<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>-->
+				<!--<span class="public-small-bottom control" id="add-user"><i class="fa fa-plus"></i>新增账号</span>-->
+			</div>
+			<div class="a-m-content">
+				<div class="data-area">
+					<!-- <input placeholder="起始时间" class="time" /><span class="line"></span>
+					<input placeholder="结束时间" class="time" />  -->
+					<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+						<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+						<input type="text" autocomplete="off" placeholder="开始日期" class="c-datepicker-data-input" id="startDate" />
+					</div>
+					至
+					<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+						<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+						<input type="text" autocomplete="off" placeholder="结束日期" class="c-datepicker-data-input" id="endDate" />
+					</div>
+					<span class="public-small-bottom" id="query"><i class="fa fa-search"></i>查询</span>
+					<ul>
+						<li id="today">今日</li>
+						<li id="thisWeek">本周</li>
+						<li id="thisMonth">本月</li>
+						<li id="thisSeason">本季度</li>
+						<li id="thisYear">本年</li>
+					</ul>
+				</div>
+				<div class="table-area">
+					<table cellpadding="0" cellspacing="0" id="someCount">
+						<thead>
+							<tr>
+								<th>招聘需求总数</th>
+								<th>订单总数</th>
+								<th>总签订人数</th>
+								<th>公司总营收</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<!-- <div class="data-result">
+					<span>2018-09-01</span><span>至</span><span>2018-09-02</span> <span
+						class="new">新增签单数</span><span class="n">23</span> <span
+						class="public-small-bottom"><i class="fa fa-cloud-download"></i>数据导出</span>
+				</div> -->
+				<div class="oneBox1">
+					<select id="demandtype">
+						<option value="month">按月</option>
+						<option value="day">按日</option>
+					</select>
+					<div class="cnt" id="demandCount">0</div>
+					<div id="demandBar"></div>
+				</div>
+				<div class="oneBox1">
+					<select id="orderType">
+						<option value="month">按月</option>
+						<option value="day">按日</option>
+					</select>
+					<div class="cnt" id="orderCount">0</div>
+					<div id="orderBar"></div>
+				</div>
+				<div class="oneBox1">
+					<select id="orderMembertype">
+						<option value="month">按月</option>
+						<option value="day">按日</option>
+					</select>
+					<div class="cnt" id="orderMemberCount">0</div>
+					<div id="orderMemberBar"></div>
+				</div>
+				<div class="oneBox1">
+					<select id="orderIncometype">
+						<option value="month">按月</option>
+						<option value="day">按日</option>
+					</select>
+					<div class="cnt" id="orderIncomeCount">0</div>
+					<div id="orderIncomeBar"></div>
+				</div>
+
+				<div class="oneBox3">
+					<div class="cnt2" id="demandTakerCount">0</div>
+					<div id="demandTakerPie"></div>
+				</div>
+				<div class="oneBox3">
+					<div class="cnt2" id="orderTakerCount">0</div>
+					<div id="orderTakerPie"></div>
+				</div>
+				<div class="oneBox3">
+					<div class="cnt2" id="orderMemberTakerCount">0</div>
+					<div id="orderMemberTakerPie"></div>
+				</div>
+				<div class="oneBox3">
+					<div class="cnt2" id="orderIncomeTakerCount">0</div>
+					<div id="orderIncomeTakerPie"></div>
+				</div>
+				<!-- <div class="twoBox">
+					<div class="a"></div>
+					<div class="b"></div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

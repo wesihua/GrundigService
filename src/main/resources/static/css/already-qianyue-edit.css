@@ -1,0 +1,59 @@
+#already-qianyue-edit .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px;
+  margin-bottom: 15px; }
+  #already-qianyue-edit .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#already-qianyue-edit .qiandan-add-content {
+  padding: 0px 20px; }
+  #already-qianyue-edit .qiandan-add-content .input-block {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+    min-height: 40px; }
+    #already-qianyue-edit .qiandan-add-content .input-block .name {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 40px;
+      line-height: 40px;
+      width: 80px; }
+    #already-qianyue-edit .qiandan-add-content .input-block .time {
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #f8f8f8; }
+    #already-qianyue-edit .qiandan-add-content .input-block .word {
+      line-height: 40px;
+      width: 500px; }
+  #already-qianyue-edit .qiandan-add-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #already-qianyue-edit .qiandan-add-content .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #already-qianyue-edit .qiandan-add-content .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #already-qianyue-edit .qiandan-add-content .table-area table tr td .delete, #already-qianyue-edit .qiandan-add-content .table-area table tr td .des, #already-qianyue-edit .qiandan-add-content .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6; }
+  #already-qianyue-edit .qiandan-add-content .control-botton {
+    padding-top: 40px;
+    text-align: center; }
+    #already-qianyue-edit .qiandan-add-content .control-botton span {
+      margin: 0px 40px; }

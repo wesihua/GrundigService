@@ -1,0 +1,210 @@
+#qiandan-manage .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+  #qiandan-manage .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#qiandan-manage .qiandan-content {
+  padding: 0px 20px; }
+  #qiandan-manage .qiandan-content .qiandan-nav {
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    margin: 20px 0px;
+    font-size: 0px; }
+    #qiandan-manage .qiandan-content .qiandan-nav li {
+      width: 120px;
+      text-align: center;
+      display: inline-block;
+      line-height: 40px;
+      padding: 0px 20px;
+      border-left: 1px solid #cccccc;
+      font-size: 12px;
+      cursor: pointer; }
+      #qiandan-manage .qiandan-content .qiandan-nav li:first-child {
+        border: none; }
+      #qiandan-manage .qiandan-content .qiandan-nav li.on {
+        background-color: #1E9FFF;
+        color: #ffffff; }
+  #qiandan-manage .qiandan-content .wait-handle .search-area {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+     }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .public-small-bottom{
+        vertical-align: top;
+     }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .c-datepicker-date-editor{
+      height:32px;
+      margin-right: 20px;
+    }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .c-datepicker-date-editor .c-datepicker-data-input{
+      width: 99px;
+    }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .c-datepicker-date-editor  .c-datepicker-range__icon{
+
+     margin-top: -10px;    
+    }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .lenove-area{
+      display: inline-block;
+      position: relative;
+      left: 0px;
+      top: 0px;
+      vertical-align: top;
+
+    }
+
+   #qiandan-manage .qiandan-content .wait-handle .search-area .lenove-area .lenove-list{
+        position: absolute;
+        left: 0px;
+        top: 40px;
+        width: 162px;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+        height: 111px;
+        overflow:auto;
+    }
+
+    #qiandan-manage .qiandan-content .wait-handle .search-area .lenove-area .li{
+        /* width: 100%; */
+        padding-left:5px;
+        height:30px;
+        line-height: 30px;
+    }
+    #qiandan-manage .qiandan-content .wait-handle .search-area .lenove-area .li:hover{
+      background-color:#e8e8e8;
+    }
+
+    #qiandan-manage .qiandan-content .wait-handle .search-area input {
+      height: 30px;
+      line-height: 30px;
+      background-color: #ffffff !important;
+      width: 140px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+
+  #qiandan-manage .qiandan-content .wait-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-manage .qiandan-content .wait-handle .table-area table tr th {
+      text-align: center;
+      height: 35px;
+      font-weight: bold;
+      color: #888888;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+    #qiandan-manage .qiandan-content .wait-handle .table-area table tr td {
+      text-align: center;
+      height: 35px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiandan-manage .qiandan-content .wait-handle .table-area table tr td .delete, #qiandan-manage .qiandan-content .wait-handle .table-area table tr td .des, #qiandan-manage .qiandan-content .wait-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6; }
+  #qiandan-manage .qiandan-content .now-handle .search-area {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #qiandan-manage .qiandan-content .now-handle .search-area input {
+      height: 40px;
+      line-height: 40px;
+      background-color: #e8e8e8;
+      width: 140px;
+      padding-left: 20px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+  #qiandan-manage .qiandan-content .now-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-manage .qiandan-content .now-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+    #qiandan-manage .qiandan-content .now-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+      #qiandan-manage .qiandan-content .now-handle .table-area table tr td .delete, #qiandan-manage .qiandan-content .now-handle .table-area table tr td .des, #qiandan-manage .qiandan-content .now-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; }
+        #qiandan-manage .qiandan-content .now-handle .table-area table tr td .delete:hover, #qiandan-manage .qiandan-content .now-handle .table-area table tr td .des:hover, #qiandan-manage .qiandan-content .now-handle .table-area table tr td .jiedan:hover {
+          color: #5595d6; }
+  #qiandan-manage .qiandan-content .already-handle .search-area {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #qiandan-manage .qiandan-content .already-handle .search-area input {
+      height: 40px;
+      line-height: 40px;
+      background-color: #e8e8e8;
+      width: 140px;
+      padding-left: 20px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+  #qiandan-manage .qiandan-content .already-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-manage .qiandan-content .already-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+    #qiandan-manage .qiandan-content .already-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+      #qiandan-manage .qiandan-content .already-handle .table-area table tr td .delete, #qiandan-manage .qiandan-content .already-handle .table-area table tr td .des, #qiandan-manage .qiandan-content .already-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; }
+        #qiandan-manage .qiandan-content .already-handle .table-area table tr td .delete:hover, #qiandan-manage .qiandan-content .already-handle .table-area table tr td .des:hover, #qiandan-manage .qiandan-content .already-handle .table-area table tr td .jiedan:hover {
+          color: #5595d6; }
+  #qiandan-manage .qiandan-content .over-handle .search-area {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #qiandan-manage .qiandan-content .over-handle .search-area input {
+      height: 40px;
+      line-height: 40px;
+      background-color: #e8e8e8;
+      width: 140px;
+      padding-left: 20px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+  #qiandan-manage .qiandan-content .over-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-manage .qiandan-content .over-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+    #qiandan-manage .qiandan-content .over-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+      #qiandan-manage .qiandan-content .over-handle .table-area table tr td .delete, #qiandan-manage .qiandan-content .over-handle .table-area table tr td .des, #qiandan-manage .qiandan-content .over-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; }
+        #qiandan-manage .qiandan-content .over-handle .table-area table tr td .delete:hover, #qiandan-manage .qiandan-content .over-handle .table-area table tr td .des:hover, #qiandan-manage .qiandan-content .over-handle .table-area table tr td .jiedan:hover {
+          color: #5595d6; }

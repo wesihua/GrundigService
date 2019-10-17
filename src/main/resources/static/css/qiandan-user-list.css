@@ -1,0 +1,37 @@
+#qiandan-user-list .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px;
+  margin-bottom: 15px; }
+  #qiandan-user-list .a-m-nav .public-small-bottom {
+    margin-top: 15px;
+    float: right; }
+
+#qiandan-user-list .qiandan-add-content {
+  padding: 0px 20px; }
+  #qiandan-user-list .qiandan-add-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-user-list .qiandan-add-content .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiandan-user-list .qiandan-add-content .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiandan-user-list .qiandan-add-content .table-area table tr td .delete, #qiandan-user-list .qiandan-add-content .table-area table tr td .des, #qiandan-user-list .qiandan-add-content .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6; }
+
+  #qiandan-user-list .qiandan-add-content .control-botton {
+    padding-top: 40px;
+    text-align: center; }
+    #qiandan-user-list .qiandan-add-content .control-botton span {
+      margin: 0px 40px; }

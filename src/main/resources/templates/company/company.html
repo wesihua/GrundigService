@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>账号管理</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/account-manage.css" rel="stylesheet"/>
+
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/company/company.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="account-manage">
+			<div class="a-m-nav">
+				<span class="title">企业管理</span> 
+				<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+				<span class="public-small-bottom control" id="add-company"><i class="fa fa-plus"></i>新增企业</span>
+			</div>
+			<div class="a-m-content">
+				<div class="input-area">
+					<input class="pt" placeholder="搜索企业名称" id="companyName"/>
+					<span id="query-bottom" class="public-small-bottom h42" ><i class="fa fa-search"></i>查询</span>
+				</div>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th width="150">企业名称</th>
+							<th width="150">所属行业</th>
+							<th width="130">企业信用代码</th>
+							<th width="150">开户行</th>
+							<th width="100">银行卡号</th>
+							<th width="100">已采集人数</th>
+							<th width="100">联系人</th>
+							<th width="100">联系电话</th>
+							<th width="200">联系地址</th>
+							<th width="180">创建时间</th>
+							<th width="100">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="current1">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="add-company-dialog" style="display:none;">
+		<div id="account-manage-box1">
+			<div class="mask"></div>
+			<div class="box1-content">
+				<div class="head"><span class="title">编辑企业</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<ul>
+						<li><span class="name"><i style="color:red;">*</i>企业名称</span><input class="pt" placeholder="填写企业名称" id="companyName"/></li>
+						<li><span class="name"><i style="color:red;">*</i>联系人</span><input class="pt" placeholder="填写联系人" id="contactName"/></li>
+						<li><span class="name"><i style="color:red;">*</i>联系电话</span><input class="pt" placeholder="填写联系电话" id="contactPhone"/></li>
+						<li><span class="name">信用代码</span><input class="pt" placeholder="填写信用代码" id="creditNumber"/></li>
+						<li><span class="name">开户行</span><input class="pt" placeholder="填写开户行" id="bank"/></li>
+						<li><span class="name">银行卡号</span><input class="pt" placeholder="填写银行卡号" id="bankAccount"/></li>
+						<li><span class="name">联系地址</span><input class="pt" placeholder="填写联系地址" id="address"/></li>
+						<li><span class="name">所属行业</span><input class="pt" placeholder="填写所属行业" id="industry"/></li>
+						<li><span class="name top">备注</span><textarea class="text-area" placeholder="填写备注" id="description"></textarea></li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on add-company">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+</body>
+</html>

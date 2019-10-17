@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>待处理详情</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/already-qiandan-des.css" rel="stylesheet" />
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/demand_close/detail.js"></script>
+
+<link href="../css/add-gz-box.css" rel="stylesheet" />
+<link href="../css/add-worker-box.css" rel="stylesheet"/>
+
+</head>
+<body>
+	<input type="hidden" id="demandId" th:value="${demandId}" />
+	<div id="content">
+		<div id="already-qiandan-des">
+			<div class="public-single-page-nav">
+				<span class="title">招聘需求详情</span>
+				<span class="control public-small-bottom" id="back"><i class="fa  fa-arrow-circle-left"></i>返回</span>
+			</div>
+			<div class="qiandan-add-content small">
+				<div class="input-block">
+					<span class="name">招聘编号</span> 
+					<span class="word companyName" id="demandNumber"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">企业</span> 
+					<span class="word companyName" id="companyName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">接单人</span> 
+					<span class="word undertokeTime" id="undertakeUserName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">接单时间</span> 
+					<span class="word undertokeTime" id="undertakeTime"></span>
+				</div>
+				<div class="input-block">
+					<span class="name" >招聘总人数</span> 
+					<span class="word totalIncome" id="workerCount"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">创建人</span> 
+					<span class="word undertokeUserName" id="createUserName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">创建时间</span> 
+					<span class="word undertokeUserName" id="createTime"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">状态</span> 
+					<span class="word undertokeUserName" id="stateName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">备注说明</span> 
+					<span class="word description" id="description"></span>
+				</div>
+
+				<div class="input-block" style="margin-top:30px;">
+					<span class="name">招聘工种</span>
+				</div>
+				<div class="table-area">
+					<table id="demand-job-table" cellpadding="0" cellspacing="0">
+						<thead>
+							<tr>
+								<th>工种</th>
+								<th>人数</th>
+								<th>到岗日期</th>
+								<th>薪资</th>
+								<th>工作地区</th>
+								<th>性别要求</th>
+								<th>年龄要求</th>
+								<th>学历要求</th>
+								<th>专业要求</th>
+								<th width="300">用工要求</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

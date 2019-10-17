@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/user-manage.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css"/>
+<link rel="stylesheet" href="../selectivity/selectivity-jquery.css"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../selectivity/selectivity-jquery.js"></script>
+<script src="../js/worker/worker.js"></script>
+</head>
+<body>
+
+<input type="hidden" id="current_rem" th:value="${current}"/>
+<input type="hidden" id="workerName_rem" th:value="${workerName}"/>
+<input type="hidden" id="telephone_rem" th:value="${telephone}"/>
+<input type="hidden" id="idcard_rem" th:value="${idcard}"/>
+<input type="hidden" id="firstId_rem" th:value="${firstId}"/>
+<input type="hidden" id="secondId_rem" th:value="${secondId}"/>
+<input type="hidden" id="createUser_rem" th:value="${createUser}"/>
+<input type="hidden" id="source_rem" th:value="${source}"/>
+<input type="hidden" id="company_rem" th:value="${company}"/>
+<input type="hidden" id="beginTime_rem" th:value="${beginTime}"/>
+<input type="hidden" id="endTime_rem" th:value="${endTime}"/>
+<input type="hidden" id="minAge_rem" th:value="${minAge}"/>
+<input type="hidden" id="maxAge_rem" th:value="${maxAge}"/>
+<input type="hidden" id="sex_rem" th:value="${sex}"/>
+<input type="hidden" id="degree_rem" th:value="${degree}"/>
+<input type="hidden" id="expectSalary_rem" th:value="${expectSalary}"/>
+<input type="hidden" id="workYear_rem" th:value="${workYear}"/>
+<input type="hidden" id="discipline_rem" th:value="${discipline}"/>
+<input type="hidden" id="workStatus_rem" th:value="${workStatus}"/>
+<input type="hidden" id="agent_rem" th:value="${agent}"/>
+
+<input type="hidden" id="pageCurrent"/>
+
+	<div id="content">
+		<div id="content-nav">
+			<span class="name">人才管理</span> 
+			<!-- <span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导入</span> --> 
+			<span class="control public-small-bottom" id="batch-delete-worker"><i class="fa fa-remove"></i>批量删除</span>
+			<span class="control public-small-bottom" id="batch-experience"><i class="fa fa-paste"></i>批量工作经历</span>
+			<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span> 
+			<span class="control public-small-bottom" id="add-worker"><i class="fa fa-plus"></i>新增人才</span>
+			
+		</div>
+		<div id="content-area">
+			<div id="user-manage">
+				<div class="chaxun">
+					<div class="select1">
+						
+						<span class="n"></span>
+						<input placeholder="姓名" id="workerName"/> 
+						<input placeholder="手机号" id="telephone"/> 
+						<input placeholder="身份证号" id="idcard"/> 
+						<!-- <input placeholder="搜索企业" id="company"/>  -->
+						<input placeholder="最小年龄" id="minAge" class="age" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+						-&nbsp;<input placeholder="最大年龄" id="maxAge" class="age" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<select id="workStatus"></select>
+					</div>
+					<div class="select1">
+						
+						<span class="n"></span>
+						<input placeholder="最低工作年限" id="workYear" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"/> 
+						<input placeholder="所学专业" id="discipline"/> 
+						<input placeholder="所属企业" id="company"/> 
+						<!-- <input placeholder="搜索企业" id="company"/>  -->
+						<select id="sex">
+							<option value="">---选择性别---</option>
+							<option value="0">男</option>
+							<option value="1">女</option>
+						</select> 
+						<input placeholder="代理人" id="agent"/>
+					</div>
+					<div class="select1">
+						<span class="n"></span>
+						<select id="degree"></select>
+						<select id="expectSalary"></select> 
+						<select id="createUser"></select> 
+						<select id="source"></select>
+					</div>
+					<div class="select2">
+						<span class="n"></span>
+						<!-- <select id="source"></select>  -->
+						<div class="c-datepicker-date-editor J-datepicker-range mt10">
+				          <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+				          <input placeholder="开始日期" name="" class="c-datepicker-data-input" id="beginTime"/>-
+				          <input placeholder="结束日期" name="" class="c-datepicker-data-input" id="endTime"/>
+				        </div> 
+				        <span class="n"></span>
+				        <span class="n"></span>
+				        <span class="n"></span>
+				        <span class="n"></span>
+						<div id="firstId"></div>
+						<!-- <span class="n"></span> -->
+						<div id="secondId"></div>
+						<span class="public-small-bottom on" id="query"><i class="fa fa-search"></i>查询</span>
+						&nbsp;&nbsp;
+						<span class="public-small-bottom on" id="reset"><i class="fa fa-undo"></i>重置</span>
+					</div>
+					<!-- <div class="select2">
+						<span class="n"></span>
+						<select id="firstId">
+							<option value=""></option>
+						</select> 
+						<span class="n"></span>
+						<select id="secondId">
+							<option value=""></option>
+						</select>
+						<span class="n"></span>
+						<select id="createUser"></select> 
+						<span class="public-small-bottom on" id="query"><i class="fa fa-search"></i>查询</span>
+					</div> -->
+				</div>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th width="50"><input type="checkbox" id="all_worker"/></th>
+							<th width="50">序号</th>
+							<th width="70">姓名</th>
+							<th width="90">手机号</th>
+							<!-- <th width="144">身份证号</th> -->
+							<th width="40">性别</th>
+							<th width="40">年龄</th>
+							<th width="100">职称</th>
+							<th width="80">擅长工种</th>
+							<th width="150">单位名称</th>
+							<th width="150">入离职时间</th>
+							<th width="100">开户行</th>
+							<th width="100">银行卡号</th>
+							<th width="80">代理人</th>
+							<th width="100">工作状态</th>
+							<th width="70">录入人</th>
+							<th width="50">来源</th>
+							<th width="100">录入时间</th>
+							<th width="100">操作</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="current1">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

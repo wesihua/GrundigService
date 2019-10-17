@@ -1,0 +1,61 @@
+
+#add-gz-box .box-content{
+    width:950px;
+    /* height: 400px; */
+    /* overflow:auto; */
+    margin-left:-470px;
+    top:100px;
+}
+#add-gz-box .box-content .middle{
+    height: 300px;
+    overflow:auto;
+    margin-bottom:10px;
+    
+}
+#add-gz-box .middle .t-area table {
+    width: 100%;
+    height: 300px;
+    overflow:auto;
+    border-collapse: collapse; }
+    #add-gz-box .middle .t-area{
+        width:100%;
+    }
+    #add-gz-box .middle .t-area table tr th {
+      text-align: center;
+      height: 30px;
+      font-weight: bold;
+      color: #888888;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #add-gz-box .middle .t-area table tr td {
+      text-align: center;
+      height: 30px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+
+      #add-gz-box .middle .t-area table tr td  .delete, #add-gz-box .middle .t-area table tr td  .edit {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6;
+      }
+
+      #add-gz-box .middle .t-area table tr td .c-datepicker-date-editor{
+          border:none !important;
+          height: 32px;
+          padding: 0px !important;
+          line-height: 0px;
+          margin:0px 5px;
+
+      }
+      #add-gz-box .middle .t-area table tr td .c-datepicker-date-editor input{
+          /* vertical-align: top; */
+          margin:0px !important;
+      }
+
+      #add-gz-box .middle .t-area table tr td input{
+          width:60px;
+          background-color:#ffffff;
+          height: 30px;
+          margin:0px 5px;
+      }

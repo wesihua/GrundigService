@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title></title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/user-manage.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../js/demand_close/demand_close.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="content-nav">
+			<span class="name">关闭招聘需求单</span> 
+			<!-- <span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导入</span> --> 
+			<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+			<!-- <span class="control public-small-bottom" id="add-worker"><i class="fa fa-cloud-download"></i>导出</span> -->
+		</div>
+		<div id="content-area">
+			<div id="user-manage">
+				<div class="chaxun">
+					<div class="select1">
+						
+						<!-- <span class="n"></span> -->
+						<input placeholder="搜索需求编号" id="demandNumber"/> 
+						<input placeholder="搜索企业名称" id="companyName"/> 
+						<input placeholder="搜索接单人" id="undertakeUserName"/> 
+						<input placeholder="搜索关单人" id="closeUserName"/> 
+					</div>
+					<div class="select2">
+						<!-- <span class="n">状态</span> -->
+						<select id="state">
+							<option value="">---请选择状态---</option>
+							<option value="0">待处理</option>
+							<option value="1">处理中</option>
+							<option value="2">已签约</option>
+							<option value="3">已结束</option>
+						</select> 
+						<div class="c-datepicker-date-editor J-datepicker-range mt10">
+				          <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+				          <input placeholder="开始日期" name="" class="c-datepicker-data-input" id="beginTime"/>-
+				          <input placeholder="结束日期" name="" class="c-datepicker-data-input" id="endTime"/>
+				        </div> 
+				        <span class="public-small-bottom" id="query"><i class="fa fa-search"></i>查询</span>
+					</div>
+				</div>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th width="120">招聘编号</th>
+							<th width="150">企业名称</th>
+							<th width="80">招聘工种</th>
+							<th width="80">招聘人数</th>
+							<th width="80">性别要求</th>
+							<th width="80">学历要求</th>
+							<th width="80">专业要求</th>
+							<th width="80">确认状态</th>
+							<th width="80">驳回原因</th>
+							<th width="70">接单人</th>
+							<th width="70">关单人</th>
+							<th width="150">关单时间</th>
+							<th width="85">关单原因</th>
+							<th width="70">状态</th>
+							<!-- <th width="63">创建人</th> -->
+							<th width="120">创建时间</th>
+							<th width="80">操作</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="current1">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 关单弹框部分 -->
+	<div id="close-demand-dialog" style="display:none;z-index:9">
+		<div class="qiandan-manage-box1">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head">
+					<span class="title">关单原因</span><span class="close fa fa-close" id="close-dialog"></span>
+				</div>
+				<div class="middle">
+					<textarea id="close-demand-textarea"></textarea>
+				</div>
+				<div class="bottom">
+					<span class="public-bottom1 cancel-dialog" >取消</span> 
+					<span class="public-bottom2 on" id="confirm-close-demand">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

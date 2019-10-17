@@ -1,0 +1,159 @@
+#user-manage .chaxun {
+  background-color: #f5f5f5;
+  padding: 20px 20px 5px 20px;
+  margin-bottom: 20px; 
+  border-radius:5px;
+}
+  #user-manage .chaxun .select1 {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom: 15px; }
+    #user-manage .chaxun .select1  span.n{
+       margin-right:5px;
+     }
+    #user-manage .chaxun .select1 input {
+      height: 30px;
+      line-height: 30px;
+      background-color: #ffffff;
+      width: 160px;
+      border:1px solid #dbdcdd;
+      /* padding-left: 20px; */
+      border-radius:5px;
+      margin-right: 20px;
+      color: #666666;
+      vertical-align: top; }
+	#user-manage .chaxun .select1 .age {
+      height: 30px;
+      line-height: 30px;
+      background-color: #ffffff;
+      width: 73px;
+      border:1px solid #dbdcdd;
+      /* padding-left: 20px; */
+      border-radius:5px;
+      margin-right: 2px;
+      color: #666666;
+      vertical-align: top; 
+	}
+    #user-manage .chaxun .select1 select {
+      /* height: 30px;
+      width: 140px;
+      text-align: center;
+      background-color: #ffffff;
+      border: none;
+      margin-right: 20px;
+      padding-left: 20px; */ 
+      
+      background:#ffffff;  
+      color: #666666;
+	    height:32px;  
+	    width:162px;  
+	    line-height:28px;  
+	    border:1px solid #dbdcdd;  
+	    -moz-border-radius:5px;  
+	    -webkit-border-radius:5px;  
+	    border-radius:5px;
+	    margin-right: 20px;
+      padding-left: 20px;
+      }
+  #user-manage .chaxun .select2 {
+    height: 30px;
+    line-height: 30px;
+    margin-bottom:15px;
+    
+     }
+     #user-manage .chaxun .select2  span.n{
+       margin-right:5px;
+     }
+    #user-manage .chaxun .select2 input {
+
+      height: 28px;
+      line-height: 28px;
+      width: 160px;
+      margin-right: 20px;
+      vertical-align: top; }
+      #user-manage .chaxun .select2 .c-datepicker-date-editor{
+        height:32px !important;
+        vertical-align: top;
+        padding-right:0px;
+      }
+     #user-manage .chaxun .select2 .c-datepicker-date-editor .c-datepicker-range__icon{
+        height: 20px !important;
+        line-height: 20px !important;
+      }
+      #user-manage .chaxun .select2 .c-datepicker-date-editor .c-datepicker-data-input{
+        width: 147px;
+        text-indent: 0px;
+        margin-right:5px;
+      }
+      #user-manage .chaxun .select2  .public-small-bottom{
+        margin-left:0px;
+        vertical-align:top;
+      }
+      #user-manage .chaxun .select2  #query{
+        margin-left:20px;
+      }
+    #user-manage .chaxun .select2 select {
+      
+      background:#ffffff;  
+      color: #666666;
+	    height:32px;  
+	    width:162px;  
+	    line-height:28px;  
+	    border:1px solid #dbdcdd;  
+	    -moz-border-radius:5px;  
+	    -webkit-border-radius:5px;  
+	    border-radius:5px;
+	    margin-right: 20px;
+      padding-left: 20px;
+    }
+    #user-manage .chaxun .select2 #firstId,#user-manage .chaxun .select2 #secondId{
+      display:inline-block;
+      width:160px;
+      background-color:#ffffff;
+      height: 30px;
+      border: 1px solid #dbdcdd;
+      border-radius:5px;
+      margin-right:20px;
+      overflow: hidden;
+      outline: none;
+    }
+    #user-manage .chaxun .select2 #firstId .selectivity-single-select,#user-manage .chaxun .select2 #secondId .selectivity-single-select{
+      background-color:#ffffff;
+      padding: 0px;
+    }
+    #user-manage .chaxun .select2 #firstId .selectivity-single-select input,#user-manage .chaxun .select2 #secondId .selectivity-single-select input{
+      outline: none;
+      margin-right:0px;
+    }
+    #user-manage .chaxun .select2 .selectivity-single-result-container{
+      top:0px !important;
+    }
+      #user-manage .chaxun .select2 select option{
+        height: 32px;
+        line-height: 32px;
+        background: #ffffff;
+      }
+
+      
+
+
+#user-manage table {
+  width: 100%;
+  border-collapse: collapse; }
+  #user-manage table tr th {
+    text-align: center;
+    height: 35px;
+    font-weight: bold;
+    color: #888888;
+    border: 1px solid #e2e2e2;
+    font-size: 12px; }
+  #user-manage table tr td {
+    text-align: center;
+    height: 35px;
+    font-weight: normal;
+    border: 1px solid #e2e2e2;
+    font-size: 12px; }
+    #user-manage table tr td .delete, #user-manage table tr td .des {
+      margin: 0px 5px;
+      cursor: pointer; 
+    color: #5595d6;}

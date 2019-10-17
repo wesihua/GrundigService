@@ -1,0 +1,36 @@
+#import-success .a-m-content{
+	padding: 0px 20px;
+}
+#import-success .a-m-content .result-tip{
+	padding: 20px 0px ;
+	margin-bottom: 20px;
+}
+#import-success .a-m-content .result-tip li{
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 14px;
+	font-weight:500;
+}
+#import-success .a-m-content .result-tip li span{
+	color:#409eff;
+}
+#import-success .a-m-content .data-result{
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+#import-success .a-m-content .data-result .tit{
+	font-size: 14px;
+	margin-bottom: 15px;
+}
+#import-success .a-m-content .data-result table{
+	width: 100%;
+	border-collapse: collapse;
+}
+#import-success .a-m-content .data-result table th,#import-success .a-m-content .data-result table td{text-align: center;
+    text-align: left;
+    height: 40px;
+    font-weight: normal;
+    border: 1px solid #e2e2e2;
+    font-size: 14px;
+    padding-left: 10px;
+}

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>待处理详情</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/already-qiandan-des.css" rel="stylesheet" />
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/signing/signing.js"></script>
+
+<link href="../css/add-gz-box.css" rel="stylesheet" />
+<link href="../css/add-worker-box.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+	<div id="content">
+		<div id="already-qiandan-des">
+			<div class="public-single-page-nav">
+				<span class="title">签约</span>
+				<span class="control public-small-bottom" id="back" onclick="window.history.go(-1)">  <i class="fa  fa-arrow-circle-left"></i> 返回</span>
+			</div>
+			<div class="qiandan-add-content">
+				<div class="input-block" style="display: none;">
+					<span class="name">签约日期</span> 
+					<span class="word undertokeTime"></span>
+				</div>
+				<div class="input-block" style="display: none;">
+					<span class="name" >收入总金额</span> 
+					<span class="word totalIncome"></span>
+				</div>
+				<div class="input-block" style="display: none;">
+					<span class="name">业务人员</span> 
+					<span class="word undertokeUserName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">企业客户</span> 
+					<span class="word companyName"></span>
+				</div>
+				<div class="input-block">
+					<span class="name">备注说明</span> 
+					<span class="word description"></span>
+				</div>
+
+				<div class="input-block">
+					<span class="name">签约用工</span>
+				</div>
+				<div class="table-area">
+					<table id="jobType-list-table" cellpadding="0" cellspacing="0">
+						<tr>
+							<th>用工工种</th>
+							<th>到岗日期</th>
+							<th>工作地区</th>
+							<th width="300">用工要求</th>
+							<th>用工人数</th>
+							<th>已签约人数</th>
+							<th width="120">操作</th>
+						</tr>
+						<!--  <tr>
+							<td>水电工</td>
+							<td>11</td>
+							<td>2018-09-01</td>
+							<td>799787</td>
+							<td>300</td>
+							<td>33300</td>
+							<td><span class="jiedan">查看签约列表</span></td>
+
+						</tr>-->
+					</table>
+				</div>
+				<div class="control-botton public-page-submit-area signing-botton" style="display: none;">
+                    <span class="public-bottom1" onclick="window.history.go(-1)">取消</span>
+                    <span class="public-bottom2" onclick="signingDetail()">完成</span>
+                </div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" name="demandId" th:value="${demandId}"/>
+	<input type="hidden" name="source" th:value="${source}"/>
+	<input type="hidden" name="jobTypeId"/>
+	
+	
+	
+	<!-- 已分配人数部分    add-gz-box-->
+    <div  id="yifenpei-list" style="display: none;">
+		<div class="public-box-css" id="add-gz-box">
+	        <div class="mask"></div>
+	        <div class="box-content">
+	            <div class="head">
+	                <span class="title" id="order-worker-list-span">已分配用工</span>
+	                <span class="fa fa-close cancel-dialog"></span>
+	            </div>
+	            <div class="middle">
+	                <div class="t-area">
+	                        <table  cellpadding="0" cellspacing="0">
+	                                <thead id="worker-list-table">
+	                                    <tr>
+	                                        <th>用户姓名</th>
+	                                        <th>籍贯</th>
+	                                        <th>身份证号</th>
+	                                        <th>联系电话</th>
+	                                        <th>擅长工种</th>
+	                                        <th>签约月工资（元）</th>
+	                                        <th>到岗日期</th>
+	
+	                                        <th>业务收入（元）</th>
+	                                        <th>操作</th>
+	                                        
+	                      				</tr>
+	                                    <tr>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td><span class="delete">移除</span><span class="edit">编辑</span></td>
+	                                    </tr>
+	                                   
+	                                </thead>
+	                                <tbody>
+	                                </tbody>
+	                            </table>
+	                </div>
+	                
+	            </div>
+	            <div class="bottom">
+	                <span class="public-bottom1 cancel-dialog">取消</span>
+	                <span class="public-bottom2 on cancel-dialog">确定</span>
+	            </div>
+	        </div>
+	
+	    </div>
+    </div>
+    
+    
+    <div  id="signing-detail" style="display: none;">
+		<div class="public-box-css" id="add-gz-box">
+	        <div class="mask"></div>
+	        <div class="box-content">
+	            <div class="head">
+	                <span class="title">本次签约详情&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	                <span class="title" id="companyName"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                <span class="title" id="demandNumber"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                <span class="title" id="workerCount"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	                <span class="title" id="income"></span>
+	                <span class="fa fa-close cancel-dialog"></span>
+	            </div>
+	            <div class="middle">
+	                <div class="t-area">
+	                        <table  cellpadding="0" cellspacing="0">
+	                                <thead id="signing-detail-table">
+	                                    <tr>
+	                                        <th>用户姓名</th>
+	                                        <th>籍贯</th>
+	                                        <th>身份证号</th>
+	                                        <th>联系电话</th>
+	                                        <th>擅长工种</th>
+	                                        <th>签约月工资（元）</th>
+	                                        <th>到岗日期</th>
+	
+	                                        <th>业务收入（元）</th>
+	                                        <th>操作</th>
+	                                        
+	                      				</tr>
+	                                    <tr>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td>xxxxx</td>
+	                                        <td><span class="delete">移除</span><span class="edit">编辑</span></td>
+	                                    </tr>
+	                                   
+	                                </thead>
+	                                <tbody>
+	                                </tbody>
+	                            </table>
+	                </div>
+	                
+	            </div>
+	            <div class="bottom">
+	                <span class="public-bottom1 cancel-dialog">取消</span>
+	                <span class="public-bottom2 on cancel-dialog " id="confirm-signing">确定</span>
+	            </div>
+	        </div>
+	
+	    </div>
+    </div>
+    
+    
+    <div id="add-worker-box-wp-div" style="display: none;">
+   	<div id="add-worker-box-wp"> 
+        <div class="mask"></div>
+	    	<div class="add-worker-box-content clearFix">
+	        	<div class="head"><span class="title">选择用工</span><span class="fa fa-close cancel-dialog"></span></div>
+		        <div id="add-worker-box" >
+		            <!-- <div class="public-single-page-nav">
+		                <span class="title">选择用工</span>
+		            </div> -->
+		            <div class="qiandan-content">
+		                <div class="wait-handle">
+		                    <div class="search-area clearFix">
+		                        <input placeholder="搜索姓名" class="" id="workerName"/>
+		                        <input placeholder="搜索手机号" class="" id="telephone"/>
+		                        <input placeholder="搜索身份证号" class="" id="idcard"/>
+		                        <span class="public-bottom2 select-worker">查询</span>
+		                    </div>
+		                    <div class="table-area">
+		                        <table cellpadding="0" cellspacing="0">
+		                            <thead>
+		                                <tr>
+		                                    <th width="84">用工姓名</th>
+		                                    <th width="173">身份证号</th>
+		                                    <!-- <th width="59">籍贯</th> --> 
+		                                    <th width="200">擅长工种</th>
+		                                    <th width="80">工资要求（元）</th>
+		                                    <th width="80">采集人</th>
+		                                    <th width="80">选择</th>
+		                                </tr>
+		                            </thead>
+		                            <tbody id="query-worker-list"></tbody>
+		                            </table>
+		                    </div>
+		                    
+		                    <!-- 分页处理部分 -->
+		                    <div class="public-fanye">
+		                            <span class="result" id="query-worker-totalCount">103个结果</span>
+		                            <div class="f-content">
+		                                <div id="query-worker-pagination1" class="page fl"></div>
+		                                <div class="info fl">
+		                                    <p>当前页数：<span id="current1">1</span></p>
+		                                </div>
+		                            </div>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+	
+	        <div id="qiandan-select-result">
+	            <div class="result-area">
+	                <ul>
+	                <!--  
+	                      <li>
+	                        <div class="select-name">张三（323233232323）</div>
+	                        <div class="select-title">
+	                            <span class="a">签约月工资（元)</span>
+	                            <span class="b">到岗日期</span>
+	                            <span class="c">业务收入（元）</span>
+	                        </div>
+	                        <div class="select-input">
+	                            <input class="a" type="text"/>
+	                            <input class="b" type="text"/>
+	                            <input class="c" type="text"/>
+	                        </div>
+	                    </li>
+	                    <li>
+	                        <div class="select-name">张三（323233232323）</div>
+	                        <div class="select-title">
+	                            <span class="a">签约月工资（元)</span>
+	                            <span class="b">到岗日期</span>
+	                            <span class="c">业务收入（元）</span>
+	                        </div>
+	                        <div class="select-input">
+	                            <input class="a" type="text"/>
+	                            <input class="b" type="text"/>
+	                            <input class="c" type="text"/>
+	                        </div>
+	                    </li>
+	                    -->
+	                </ul>
+	                </div>
+	
+	            
+	        </div>
+			<div class="control-botton">
+				<span class="public-bottom1 cancel-dialog" >取消</span>
+				<span class="public-bottom2 addWorker" id="confirm-addWorker-botton">完成</span>
+			</div>   
+	    </div>
+		</div>
+	</div>
+</body>
+</html>

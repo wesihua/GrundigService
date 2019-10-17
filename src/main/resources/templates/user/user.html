@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>账号管理</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/account-manage.css" rel="stylesheet"/>
+
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/user/user.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="account-manage">
+			<div class="a-m-nav">
+				<span class="title">账号管理</span> 
+				<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+				<span class="public-small-bottom control" id="add-user"><i class="fa fa-plus"></i>新增账号</span>
+			</div>
+			<div class="a-m-content">
+				<div class="input-area">
+					<input class="pt" placeholder="搜索用户名" id="userName"/> <input class="pt" placeholder="搜索真实姓名" id="real_name"/> 
+						<select class="se" name="" id="roleId">
+							<option value="">---请选择角色---</option>
+						</select>
+					<span id="query-bottom2" class="public-small-bottom h42"><i class="fa fa-search"></i>查询</span>
+				</div>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th>账号名称</th>
+							<th>账号密码</th>
+							<th>所属人员</th>
+							<th>所属角色</th>
+							<th>创建日期</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="current1">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="add-user-dialog" style="display:none;">
+		<div id="account-manage-box1">
+			<div class="mask"></div>
+			<div class="box1-content">
+				<div class="head"><span class="title">新增账号</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<ul>
+						<li><span class="name"><i style="color:red;">*</i>账号名称</span><input class="pt" placeholder="填写账号名称" id="userName_add"/></li>
+						<li><span class="name"><i style="color:red;">*</i>所属员工</span><input class="pt" placeholder="填写员工姓名" id="realName"/></li>
+						<li>
+							<span class="name">所属角色</span>
+							<select class="se" id="roleId_add">
+								<option value="">---请选择---</option>
+							</select>
+						</li>
+						<li><span class="name"><i style="color:red;">*</i>账号密码</span><input class="pt" type="password" placeholder="填写账号密码" id="password"/></li>
+						<li><span class="name">确认密码</span><input class="pt" type="password" placeholder="填写确认密码" id="repassword"/></li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on add-user">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="edit-user-dialog" style="display:none;">
+		<div id="account-manage-box1">
+			<div class="mask"></div>
+			<div class="box1-content">
+				<div class="head"><span class="title">编辑账号</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<ul>
+						<li><span class="name"><i style="color:red;">*</i>账号名称</span><input class="pt" placeholder="填写账号名称" id="userName_edit"/></li>
+						<li><span class="name"><i style="color:red;">*</i>所属员工</span><input class="pt" placeholder="填写员工姓名" id="realName_edit"/></li>
+						<li>
+							<span class="name">所属角色</span>
+							<select class="se" id="roleId_edit">
+								<option value="">---请选择---</option>
+							</select>
+						</li>
+						<li><span class="name"><i style="color:red;">*</i>账号密码</span><input class="pt" placeholder="填写账号密码" id="password_edit"/></li>
+					</ul>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on add-user">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

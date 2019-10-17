@@ -1,0 +1,44 @@
+#qiye-manage .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+  #qiye-manage .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#qiye-manage .qiandan-content {
+  padding: 0px 20px; }
+  #qiye-manage .qiandan-content .wait-handle .search-area {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #qiye-manage .qiandan-content .wait-handle .search-area input {
+      height: 40px;
+      line-height: 40px;
+      background-color: #e8e8e8;
+      width: 140px;
+      padding-left: 20px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+  #qiye-manage .qiandan-content .wait-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiye-manage .qiandan-content .wait-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiye-manage .qiandan-content .wait-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiye-manage .qiandan-content .wait-handle .table-area table tr td .delete, #qiye-manage .qiandan-content .wait-handle .table-area table tr td .des, #qiye-manage .qiandan-content .wait-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6; }

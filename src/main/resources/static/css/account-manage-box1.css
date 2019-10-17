@@ -1,0 +1,216 @@
+#account-manage-box1 .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+#account-manage-box1 .box1-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #ffffff;
+  width: 500px;
+  /* height: 430px; */
+  margin-top: -200px;
+  margin-left: -250px;
+  border-radius: 10px; }
+  #account-manage-box1 .box1-content .head {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 20px; }
+    #account-manage-box1 .box1-content .head .title{
+    font-size: 14px;
+    font-weight: bold; }
+
+    #account-manage-box1 .box1-content .head .fa-close {
+      float: right;
+      margin-top: 10px;
+      font-size: 20px;
+      cursor: pointer; }
+      #account-manage-box1 .box1-content .head .fa-close:hover{
+        color:#409eff;
+      }
+  #account-manage-box1 .box1-content .middle {
+    padding: 20px;
+    height: 260px;
+    overflow: auto;
+    font-size: 0px; }
+    #account-manage-box1 .box1-content .middle ul li {
+      min-height: 30px;
+      /* line-height: 40px; */
+      margin-bottom:15px; }
+      #account-manage-box1 .box1-content .middle ul li .name {
+        display: inline-block;
+        width: 60px;
+        margin-right: 30px;
+        font-size: 12px; }
+
+        #account-manage-box1 .box1-content .middle ul li .name.top{
+          vertical-align: top;
+        }
+        #account-manage-box1 .box1-content .middle ul li .text-area{
+          height: 60px;
+          resize: none;
+          overflow: auto;
+          width: 300px;
+        }
+      #account-manage-box1 .box1-content .middle ul li .pt, #account-manage-box1 .box1-content .middle ul li .se {
+        width: 300px;
+        height:30px;
+        line-height: 30px;
+        border-radius: 5px; }
+      #account-manage-box1 .box1-content .middle ul li .se option {
+        height: 40px;
+        line-height: 40px; }
+  #account-manage-box1 .box1-content .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #cccccc; }
+    #account-manage-box1 .box1-content .bottom span {
+      margin: 0px 20px; }
+
+/* #user-manage-box2 .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+#user-manage-box2 .box2-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #ffffff;
+  width: 500px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -250px;
+  border-radius: 10px; }
+  #user-manage-box2 .box2-content .head {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 20px; }
+    #user-manage-box2 .box2-content .head .fa-close {
+      float: right;
+      margin-top: 10px;
+      cursor: pointer; }
+  #user-manage-box2 .box2-content .middle {
+    padding: 20px 20px 0px 20px;
+    height: 240px;
+    overflow: auto; }
+    #user-manage-box2 .box2-content .middle .input-block {
+      min-height: 40px;
+      line-height: 40px;
+      margin-bottom: 10px; }
+      #user-manage-box2 .box2-content .middle .input-block .name {
+        margin-right: 20px; }
+      #user-manage-box2 .box2-content .middle .input-block .select {
+        height: 40px;
+        width: 280px; }
+      #user-manage-box2 .box2-content .middle .input-block .pt {
+        height: 40px;
+        width: 280px;
+        background-color: #eeeeee;
+        text-indent: 10px; }
+      #user-manage-box2 .box2-content .middle .input-block .time {
+        width: 120px;
+        height: 40px;
+        background-color: #eeeeee;
+        text-indent: 10px; }
+      #user-manage-box2 .box2-content .middle .input-block .line {
+        width: 10px;
+        height: 2px;
+        background-color: #cccccc;
+        margin: 0px 10px;
+        vertical-align: middle;
+        display: inline-block; }
+  #user-manage-box2 .box2-content .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #cccccc; }
+    #user-manage-box2 .box2-content .bottom span {
+      margin: 0px 20px; }
+
+#user-manage-box3 .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+#user-manage-box3 .box-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #ffffff;
+  width: 500px;
+  height: 440px;
+  margin-top: -220px;
+  margin-left: -250px;
+  border-radius: 10px; }
+  #user-manage-box3 .box-content .head {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 20px; }
+    #user-manage-box3 .box-content .head .fa-close {
+      float: right;
+      margin-top: 10px;
+      cursor: pointer; }
+  #user-manage-box3 .box-content .middle {
+    padding: 20px 20px 0px;
+    height: 280px;
+    overflow: auto; }
+    #user-manage-box3 .box-content .middle .input-block {
+      min-height: 40px;
+      line-height: 40px;
+      margin-bottom: 10px; }
+      #user-manage-box3 .box-content .middle .input-block .name {
+        margin-right: 20px; }
+        #user-manage-box3 .box-content .middle .input-block .name.t {
+          vertical-align: top; }
+      #user-manage-box3 .box-content .middle .input-block .pt {
+        height: 40px;
+        width: 280px;
+        background-color: #eeeeee;
+        text-indent: 10px; }
+      #user-manage-box3 .box-content .middle .input-block .time {
+        width: 120px;
+        height: 40px;
+        background-color: #eeeeee;
+        text-indent: 10px; }
+      #user-manage-box3 .box-content .middle .input-block .line {
+        width: 10px;
+        height: 2px;
+        background-color: #cccccc;
+        margin: 0px 10px;
+        vertical-align: middle;
+        display: inline-block; }
+      #user-manage-box3 .box-content .middle .input-block .workText {
+        text-indent: 10px;
+        resize: none;
+        width: 370px;
+        height: 100px;
+        background-color: #eeeeee;
+        overflow: auto;
+        text-align: left;
+        line-height: 20px;
+        border: none; }
+  #user-manage-box3 .box-content .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #cccccc; }
+    #user-manage-box3 .box-content .bottom span {
+      margin: 0px 20px; } */

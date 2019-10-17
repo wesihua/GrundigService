@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>账号管理</title>
+<link href="../css/public.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/juese-manage.css" rel="stylesheet"/>
+<link href="../css/juese-manage-box2.css" rel="stylesheet"/>
+
+
+<link href="../css/jquery.pagination.css" rel="stylesheet"/>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/role/role.js"></script>
+</head>
+<body>
+
+<input type="hidden" id="roleId" />
+	<div id="content">
+		<div id="juese-manage">
+			<div class="public-single-page-nav">
+				<span class="title">角色管理</span> 
+				<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+				<span class="public-small-bottom" id="add-role"><i class="fa fa-plus"></i>新增角色</span>
+			</div>
+			<div class="a-m-content">
+				<div class="input-area">
+					<input class="pt" placeholder="搜索角色" id="roleName"/>
+					<span class="public-small-bottom h42"  id="query-bottom"><i class="fa fa-search"></i>查询</span>
+				</div>
+				<table cellpadding="0" cellspacing="0">
+					<thead>
+						<tr>
+							<th>角色名称</th>
+							<th>包含账号数量</th>
+							<th>创建日期</th>
+							<th width="280">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="currentPage">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 新增/编辑角色弹窗 -->
+	<div id="dialog-content" style="display:none;">
+		<div id="juese-manage-box1">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head"><span class="title">新增角色</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<div class="input-block"><span class="name">角色名称</span><input class="pt" id="roleName"/></div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on save-role">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 菜单权限内容 -->
+	<div id="dialog-menu-content" style="display: none;">
+		<div id="juese-manage-box2">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head">
+					<span class="title">选择菜单</span><span class="close fa fa-close" id="close-dialog"></span>
+				</div>
+				<div class="middle" id="menu-content">
+					<div class="select">
+						<div class="s">
+							<div class="workType">
+								<input type="checkbox" /><span>一级菜单</span>
+							</div>
+						</div>
+						<div class="s two">
+							<div class="workType">
+								<input type="checkbox" /><span>二级</span>
+							</div>
+							<div class="workType">
+								<input type="checkbox" /><span>二级</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span> 
+					<span id="public-bottom2" class="public-bottom2 on save-menuright">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>用工录入统计</title>
+
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<link href="css/reportForm.css" rel="stylesheet" />
+<link href="css/jquery.pagination.css" rel="stylesheet" />
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery.pagination.min.js"></script>
+<script src="charts/highcharts.js"></script>
+<script src="charts/exporting.js"></script>
+<script src="charts/export-data.js"></script>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css" />
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="js/report/report.js"></script>
+
+</head>
+<body>
+
+	<div id="content">
+		<div id="reportForm">
+			<div class="public-single-page-nav">
+				<span class="title">人才报表</span>
+				<!--<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>-->
+				<!--<span class="public-small-bottom control" id="add-user"><i class="fa fa-plus"></i>新增账号</span>-->
+			</div>
+			<div class="a-m-content clearFix">
+				<div class="table-area">
+					<table cellpadding="0" cellspacing="0" id="someCount">
+						<thead>
+							<tr>
+								<th>统计项</th>
+								<th>今天</th>
+								<th>本周</th>
+								<th>本月</th>
+								<th>本季度</th>
+								<th>本年</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+				<div class="data-area">
+					<!-- <input placeholder="起始时间" class="time" /><span class="line"></span>
+					<input placeholder="结束时间" class="time" />  -->
+					<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+						<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+						<input type="text" autocomplete="off" placeholder="开始日期" class="c-datepicker-data-input" id="startDate" />
+					</div>
+					至
+					<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+						<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+						<input type="text" autocomplete="off" placeholder="结束日期" class="c-datepicker-data-input" id="endDate" />
+					</div>
+					<span class="public-small-bottom" id="query"><i class="fa fa-search"></i>查询</span>
+					<ul>
+						<li id="today">今日</li>
+						<li id="thisWeek">本周</li>
+						<li id="thisMonth">本月</li>
+						<li id="thisSeason">本季度</li>
+						<li id="thisYear">本年</li>
+					</ul>
+				</div>
+				<!-- <div class="data-result">
+					<span>2018-09-01</span><span>至</span><span>2018-09-02</span> <span
+						class="new">新增签单数</span><span class="n">23</span> <span
+						class="public-small-bottom"><i class="fa fa-cloud-download"></i>数据导出</span>
+				</div> -->
+				<div id="totalCount" style="color:green;height:30px;margin: 0 0 15px 20px;font-weight: bold;font-size: 18px;">
+					简历总数：0
+				</div>
+				<div class="oneBox">
+					<div class="cnt2" id="sourceCount">0</div>
+					<div id="workerSourcePie"
+						style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+				<div class="oneBox">
+					<div class="cnt2" id="degreeCount">0</div>
+					<div id="workerDegreePie"
+						style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+				
+				<div class="oneBox">
+					<div class="cnt2" id="createUserCount">0</div>
+					<div id="workerCreateUserPie" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+				<div class="oneBox">
+					<div class="cnt2" id="statusCount">0</div>
+					<div id="workerStatusPie" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+				<div class="oneBox1">
+					<select id="type">
+						<option value="month">按月</option>
+						<option value="day">按日</option>
+					</select>
+					<div class="cnt" id="workerCount">0</div>
+					<div id="workerBar" style="margin: 0 auto"></div>
+				</div>
+				<div class="oneBox1">
+					<div class="cnt2" id="createUserBarCount">0</div>
+					<div id="workerCreateUserBar" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+				</div>
+				
+
+				<!-- <div class="twoBox">
+					<div class="a"></div>
+					<div class="b"></div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

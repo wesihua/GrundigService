@@ -1,0 +1,200 @@
+#reportForm .a-m-content{
+	padding: 0px 20px;	
+}
+
+#reportForm .a-m-content .data-area{
+      height: 32px;
+      padding:20px;
+      background-color:#f5f5f5 ;
+      margin-bottom:20px;
+      border-radius: 5px;
+}
+#reportForm .a-m-content .data-area .time{  
+    height:28px;
+    line-height:28px;
+    background-color: #ffffff;
+    width: 160px;
+    border: 1px solid #dbdcdd;
+    border-radius: 5px;
+}
+
+#reportForm .a-m-content .data-area .c-datepicker-date-editor{
+      height:32px;
+      line-height:32px;
+}
+#reportForm .a-m-content .data-area .line{
+      display: inline-block;
+      width:20px;
+      height:2px;
+      background-color:#a4a4a4;
+      margin:0px 10px;
+}
+#reportForm .a-m-content .data-area .public-small-bottom{
+      margin-left:15px;
+      vertical-align: top;
+}
+
+#reportForm .a-m-content .data-area ul{
+      float:right;
+}
+#reportForm .a-m-content .data-area ul li{
+    display: inline-block;
+    border-radius: 5px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    color: #409eff;
+    background: #ecf5ff;
+    border: 1px solid #b3d8ff;
+    padding: 0px 15px;
+    cursor: pointer;
+    margin-left:20px;
+}
+
+#reportForm .a-m-content .data-area ul li:hover{
+      background-color:#409eff;
+      color:#ffffff;
+}
+
+#reportForm .a-m-content .data-result{
+      font-size:14px;
+      height: 32px;
+      line-height: 32px;
+      padding:20px;
+      background-color:#f5f5f5 ;
+      margin-bottom:20px;
+      border-radius: 5px;
+}
+#reportForm  .a-m-content .data-result .public-small-bottom{
+      float:right;
+      
+}
+
+#reportForm .a-m-content .data-result  .new{
+      margin:0px 15px 0px 25px;
+}
+
+#reportForm .a-m-content .oneBox{
+      /* display: inline-block; */
+   width:533px;
+   /* height: 400px; */
+   min-height:400px;
+   border:1px solid #cccccc;
+   margin-bottom:20px;
+   float: left;
+   margin-right: 15px;
+}
+#reportForm .a-m-content .oneBox3{
+      /* display: inline-block; */
+   width:533px;
+   /* height: 400px; */
+   min-height:438px;
+   border:1px solid #cccccc;
+   margin-bottom:20px;
+   float: left;
+   margin-right: 15px;
+}
+#reportForm .a-m-content .oneBox1{
+      /* display: inline-block; */
+   width:533px;
+   /* height: 400px; */
+   min-height:438px;
+   border:1px solid #cccccc;
+   margin-bottom:20px;
+   float: left;
+   margin-right: 15px;
+}
+#reportForm .a-m-content .oneBox #type,#reportForm .a-m-content .oneBox  #demandtype
+,#reportForm .a-m-content .oneBox  #orderType,#reportForm .a-m-content .oneBox  #orderMembertype
+,#reportForm .a-m-content .oneBox  #orderIncometype{
+      height:40px;
+      line-height: 40px;
+      margin:10px 0px 0px 10px;
+}
+#reportForm .a-m-content .oneBox1 #type,#reportForm .a-m-content .oneBox1  #demandtype
+,#reportForm .a-m-content .oneBox1  #orderType,#reportForm .a-m-content .oneBox1  #orderMembertype
+,#reportForm .a-m-content .oneBox1  #orderIncometype{
+      height:30px;
+      line-height: 20px;
+      margin:10px 0px 0px 10px;
+}
+
+#reportForm .a-m-content .oneBox1 .cnt,#reportForm .a-m-content .oneBox3 .cnt{
+	border: 1px solid #dcdfe6;
+	background:#f8f8f8;
+	margin:-2px 0px 0px 10px;
+	height:28px;
+	padding:0px 10px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #7CB5EC;
+}
+#reportForm .a-m-content .oneBox1 .cnt2,#reportForm .a-m-content .oneBox3 .cnt2{
+	border: 1px solid #dcdfe6;
+	background:#f8f8f8;
+	margin: 10px 0px 0px 10px;
+	height:28px;
+	padding:0px 10px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #7CB5EC;
+}
+#reportForm .a-m-content .oneBox .cnt2,#reportForm .a-m-content .oneBox .cnt1{
+      border: 1px solid #dcdfe6;
+	background:#f8f8f8;
+	margin: 10px 0px 0px 10px;
+	height:28px;
+	padding:0px 10px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #7CB5EC;
+}
+/* #reportForm .a-m-content .twoBox{
+      width:500px;
+      height: 400px;
+      border:1px solid #cccccc;
+      margin-bottom:20px;
+} */
+#reportForm .a-m-content .a{
+      float: left;
+      width:250px;
+      height: 400px;
+      background-color: #a4a4a4;
+}
+#reportForm .a-m-content .b{
+      float: left;
+      width:250px;
+      height: 400px;
+}
+#reportForm .a-m-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; 
+      margin-bottom:40px;
+}
+#reportForm .a-m-content .table-area table tr th {
+      text-align: center;
+      height: 35px;
+      font-weight: bold;
+      color: #888888;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+#reportForm .a-m-content .table-area table tr td {
+      text-align: center;
+      height: 35px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; 
+      width: 16%;
+}

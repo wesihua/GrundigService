@@ -1,0 +1,72 @@
+#qiye-manage-des .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+  #qiye-manage-des .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#qiye-manage-des .qiandan-content {
+  padding: 0px 20px; }
+  #qiye-manage-des .qiandan-content .qiandan-nav {
+    height: 40px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    margin: 20px 0px;
+    font-size: 0px; }
+    #qiye-manage-des .qiandan-content .qiandan-nav li {
+      width: 120px;
+      text-align: center;
+      display: inline-block;
+      line-height: 40px;
+      padding: 0px 20px;
+      border-left: 1px solid #cccccc;
+      font-size: 12px;
+      cursor: pointer; }
+      #qiye-manage-des .qiandan-content .qiandan-nav li:first-child {
+        border: none; }
+      #qiye-manage-des .qiandan-content .qiandan-nav li.on {
+        background-color: #1E9FFF;
+        color: #ffffff; }
+  #qiye-manage-des .qiandan-content .des-area ul li {
+    min-height: 40px;
+    margin-bottom: 15px; }
+    #qiye-manage-des .qiandan-content .des-area ul li .name {
+      display: inline-block;
+      width: 65px;
+      line-height: 40px;
+      vertical-align: top; }
+    #qiye-manage-des .qiandan-content .des-area ul li .inputArea {
+      width: 400px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #e8e8e8; }
+    #qiye-manage-des .qiandan-content .des-area ul li .textarea {
+      vertical-align: top;
+      width: 400px;
+      height: 200px;
+      line-height: 40px;
+      background-color: #e8e8e8;
+      resize: none;
+      overflow: auto; }
+  #qiye-manage-des .qiandan-content .wait-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiye-manage-des .qiandan-content .wait-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiye-manage-des .qiandan-content .wait-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiye-manage-des .qiandan-content .wait-handle .table-area table tr td .delete, #qiye-manage-des .qiandan-content .wait-handle .table-area table tr td .des, #qiye-manage-des .qiandan-content .wait-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; 
+      color: #5595d6;}

@@ -1,0 +1,207 @@
+#user-manage-control .party1 {
+  margin-bottom: 25px; }
+  #user-manage-control .party1 .base-info {
+    width: 380px;
+    float: left;
+    margin-right: 80px; }
+    #user-manage-control .party1 .base-info .inut-b {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      min-height: 32px;
+      margin-bottom: 10px;
+      padding-left: 90px; }
+
+      #user-manage-control .party1 .base-info .inut-b .c-datepicker-date-editor{
+        height:32px;
+        width:290px;
+        background-color:#f8f8f8;
+      }
+      #user-manage-control .party1 .base-info .inut-b #birthplaceCode .selectivity-single-select{
+        background-color: #f8f8f8;
+        border: 1px solid #dcdfe6;
+        border-radius: 5px;
+      }
+      #user-manage-control .party1 .base-info .inut-b #workplaceCode .selectivity-single-select{
+        background-color: #f8f8f8;
+        border: 1px solid #dcdfe6;
+        border-radius: 5px;
+      }
+      #user-manage-control .party1 .base-info .inut-b #jobtype_new .selectivity-multiple-input-container{
+        background-color: #f8f8f8;
+        border: 1px solid #dcdfe6;
+        border-radius: 5px;
+      }
+      #user-manage-control .party1 .base-info .inut-b #jobtype_new .selectivity-multiple-input-container input{
+        width: 90px;
+      }
+      
+      #user-manage-control .party1 .base-info .inut-b .c-datepicker-date-editor .c-datepicker-data-input{
+        background-color:#f8f8f8;
+      }
+      #user-manage-control .party1 .base-info .inut-b .c-datepicker-date-editor .c-datepicker-range__icon{
+        margin-top:0px;
+        height: 30px !important;
+        line-height: 30px !important;
+      }
+      #user-manage-control .party1 .base-info .inut-b .name {
+        position: absolute;
+        left: 0px;
+        color: #888888;
+        top: 0px;
+        width: 90px;
+        height: 32px;
+        line-height:32px; }
+        #user-manage-control .party1 .base-info .inut-b .name i {
+          color: red;
+          vertical-align: middle;
+          line-height: 0px;
+          margin-right: 2px; }
+      #user-manage-control .party1 .base-info .inut-b .inputValue {
+        width: 288px;
+        height: 30px;
+        line-height: 30px;
+        border:1px solid #dcdfe6;
+        border-radius:5px;
+        /* background-color: #f8f8f8; */
+         }
+         #user-manage-control .party1 .base-info .inut-b div.inputValue {
+          text-indent: 10px;
+          color: #888888;
+          overflow:auto;
+         }
+      #user-manage-control .party1 .base-info .inut-b .selectControl {
+        width: 290px;
+        height: 32px;
+        line-height: 32px;
+        border:1px solid #dcdfe6;
+        border-radius: 5px;       
+        }
+        #user-manage-control .party1 .base-info .inut-b .selectControl.mt{
+          margin-bottom:10px;
+        }
+        #user-manage-control .party1 .base-info .inut-b .selectControl  option{
+          height: 32px;
+          line-height: 32px;
+        }
+    #user-manage-control .party1 .base-info .jianjie {
+      width: 380px;
+      float: right; }
+      #user-manage-control .party1 .base-info .jianjie .name {
+        width: 90px;
+        color: #888888;
+        height: 40px;
+        line-height: 40px;
+        float: left; }
+      #user-manage-control .party1 .base-info .jianjie .textarea {
+        display: inline-block;
+        /* color: #888888; */
+        width: 288px;
+        /* padding: 5px; */
+        line-height: 20px;
+        min-height: 80px;
+        max-height: 120px;
+        margin-bottom: 15px;
+        resize: none; 
+        border:1px solid #dcdfe6;
+        border-radius:5px;
+        /* background-color: #f8f8f8; */
+        overflow:auto;
+        
+      }
+      #user-manage-control .party1 .base-info .jianjie div.textarea{
+        text-indent: 10px;
+      }
+      #user-manage-control .party1 .base-info .jianjie .textarea2 {
+        width: 290px;
+        line-height: 20px;
+        height: auto; }
+
+#user-manage-control .party2 {
+  margin-bottom: 40px; }
+  #user-manage-control .party2 .nav-tip {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px; }
+    #user-manage-control .party2 .nav-tip .name {
+      display: inline-block;
+      color: #888888;
+      width: 90px; }
+    /* #user-manage-control .party2 .nav-tip .button {
+      display: inline-block;
+      line-height: 40px;
+      padding: 0px 30px;
+      background: #01aaff;
+      color: #FFFFFF;
+      border-radius: 5px;
+      cursor: pointer; } */
+  #user-manage-control .party2 .history {
+    position: relative;
+    color: #888888;
+    left: 0px;
+    top: 0px;
+    width: 750px;
+    padding-left: 90px;
+    margin-bottom: 15px; }
+    #user-manage-control .party2 .history .delete {
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-weight: normal;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 100; }
+    #user-manage-control .party2 .history .edit {
+      position: absolute;
+      right: 36px;
+      top: 7px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-weight: normal;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 100; }
+    #user-manage-control .party2 .history ul {
+      /* background-color: #e8e8e8; */
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      padding: 10px 20px; }
+      #user-manage-control .party2 .history ul li {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        min-height: 40px;
+        padding-left: 80px; }
+        #user-manage-control .party2 .history ul li .name {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 80px;
+          line-height: 40px; }
+        #user-manage-control .party2 .history ul li .content {
+          padding-top: 10px;
+          display: inline-block;
+          line-height: 22px; }
+
+#user-manage-control .footer-button {
+  padding:20px 0px;
+  border-top:1px solid #dcdfe6;
+  text-align: center; }
+  #user-manage-control .footer-button span {
+    margin: 0px 40px;
+    padding: 0px 30px;
+    border-radius: 5px;
+    cursor: pointer; }
+
+#user-manage-control .recod-info {
+  color: #a0a0a0; }
+  #user-manage-control .recod-info span:first-child {
+    margin-right: 20px; }

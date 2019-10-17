@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>账号管理</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/gongzhong-peizhi.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/jobtype/jobtype.js"></script>
+</head>
+<body>
+		<div id="content">
+			<div id="gongzhong-peizhi">
+				<div class="a-m-nav public-single-page-nav">
+					<span class="title">工种配置</span> 
+						<span class="control public-small-bottom" id="edit-jobtype"><i class="fa fa-edit"></i>编辑工种</span> <span
+						class="control public-small-bottom" id="add-jobtype-btn"><i class="fa fa-plus"></i>新增工种</span>
+						<!-- <span class="control public-small-bottom" id="import-jobtype"><i class="fa fa-edit"></i>导入工种</span> -->
+				</div>
+				<div class="a-m-content" id="jobtype-content"></div>
+				<div class="button-control" style="display:none;">
+					<span id="public-bottom2">完成</span>
+				</div>
+
+
+			</div>
+
+		</div>
+	<div id="add-jobtype" style="display:none;">
+		<div id="gongzhong-peizhi-box1">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head"><span class="title">新增工种</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<div class="input-block"><span class="name">工种名称</span><input class="pt" id="jobtypeName"/></div>
+					<div class="input-block"><span class="name">工种类型</span>
+						<select class="se" id="level">
+							<option value="1">一级工种</option>
+							<option value="2">二级工种</option>
+					    </select>
+				   </div>
+					<div class="input-block" id="parentId_div" style="display:none;">
+						<span class="name">上级工种</span>
+						<select class="se" id="parentId"></select>
+				   </div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on save-jobtype">完成</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="update-jobtype" style="display:none;">
+		<div id="gongzhong-peizhi-box1">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head"><span class="title">更新工种</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<div class="input-block"><span class="name">工种名称</span><input class="pt" id="jobtypeName"/></div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on save-jobtype">完成</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

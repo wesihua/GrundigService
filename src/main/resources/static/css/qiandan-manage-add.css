@@ -1,0 +1,147 @@
+
+
+#qiandan-manage-add .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px;
+  margin-bottom: 15px; }
+  #qiandan-manage-add .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#qiandan-manage-add .qiandan-add-content {
+  padding: 0px 20px; }
+  #qiandan-manage-add .qiandan-add-content .input-block {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 15px;
+    padding-left: 80px; }
+    #qiandan-manage-add .qiandan-add-content .input-block .name {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height:32px;
+      line-height:32px;
+      width: 80px; }
+      #qiandan-manage-add .qiandan-add-content .input-block input {
+
+      width: 280px;
+      height:30px;
+      line-height:30px;
+      background-color: #f8f8f8; }
+      #qiandan-manage-add .qiandan-add-content .input-block .company {
+
+      width: 350px;
+      height:30px;
+      line-height:30px;
+      background-color: #f8f8f8; }
+      #qiandan-manage-add .qiandan-add-content .input-block{
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+      #qiandan-manage-add .qiandan-add-content .input-block #companyName{
+        display:inline-block;
+        width:280px;
+        background-color:#ffffff;
+        height: 30px;
+        border: 1px solid #dbdcdd;
+        border-radius:5px;
+        margin-right:20px;
+        overflow: hidden;
+        outline: none;
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block #companyName .selectivity-single-select{
+        background-color:#ffffff;
+        padding: 0px;
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block #companyName .selectivity-single-select input{
+        outline: none;
+        margin-right:0px;
+  
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block #companyName input{
+        width:273px !important;
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block #companyName .selectivity-single-result-container{
+        top:0px !important;
+      }
+
+
+
+      #qiandan-manage-add .qiandan-add-content .input-block .lenove-list{
+        position: absolute;
+        left: 80px;
+        top:36px;
+        z-index: 2;
+        width:280px;
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+        height: 111px;
+        overflow: auto;
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block .lenove-list .li{
+        /* width: 100%; */
+        padding-left:5px;
+        height:30px;
+        line-height: 30px;
+      }
+      #qiandan-manage-add .qiandan-add-content .input-block .lenove-list .li:hover{
+        background-color:#e8e8e8;
+      }
+    /* #qiandan-manage-add .qiandan-add-content .input-block select {
+      width: 280px;
+      height: 40px;
+      line-height: 40px;
+      background-color: #f8f8f8; }
+    #qiandan-manage-add .qiandan-add-content .input-block select option {
+      height: 40px;
+      line-height: 40px; } */
+    #qiandan-manage-add .qiandan-add-content .input-block textarea {
+      background-color: #f8f8f8;
+      font-size: 12px;
+      line-height: 20px;
+      height: 100px;
+      width: 350px;
+      resize: none;
+      overflow: hidden;
+       }
+    #qiandan-manage-add .qiandan-add-content .input-block .public-bottom2 {
+      padding: 0px 10px; }
+  #qiandan-manage-add .qiandan-add-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-manage-add .qiandan-add-content .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiandan-manage-add .qiandan-add-content .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiandan-manage-add .qiandan-add-content .table-area table tr td .delete, #qiandan-manage-add .qiandan-add-content .table-area table tr td .des, #qiandan-manage-add .qiandan-add-content .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer;
+        color: #5595d6; }
+  #qiandan-manage-add .qiandan-add-content .control-botton {
+    padding-top: 40px;
+    text-align: center; }
+    #qiandan-manage-add .qiandan-add-content .control-botton span {
+      margin: 0px 40px; }
+      
+    #qiandan-manage-add .qiandan-add-content .name i {
+    color: red;
+    vertical-align: middle;
+    line-height: 0px;
+    margin-right: 2px;
+}
+
+    

@@ -1,0 +1,104 @@
+#qiandan-qianyue-add {
+  width: 750px;
+  float: left;
+}
+
+
+/* #qiandan-qianyue-add .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+  #qiandan-qianyue-add .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; } */
+
+#qiandan-qianyue-add .qiandan-content {
+  padding: 0px 20px; }
+  #qiandan-qianyue-add .qiandan-content .wait-handle .search-area {
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #qiandan-qianyue-add .qiandan-content .wait-handle .search-area input {
+      height:30px;
+      line-height:30px;
+      background-color: #ffffff;
+      width: 140px;
+      margin-right: 20px;
+      vertical-align: top;
+      margin-right: 20px; }
+      .#qiandan-qianyue-add .qiandan-content .wait-handle .search-area .public-bottom2{
+        vertical-align: top;
+      }
+  #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table tr td .delete, #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table tr td .des, #qiandan-qianyue-add .qiandan-content .wait-handle .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; 
+      color: #5595d6;}
+
+  #qiandan-qianyue-add .qiandan-content .control-botton {
+    padding-top: 40px;
+    text-align: center; }
+    #qiandan-qianyue-add .qiandan-content .control-botton span {
+      margin: 0px 40px; }
+
+      #qiandan-select-result{
+          float: right;
+          width:320px;
+          background-color: #f8f8f8;
+          padding-left: 30px;
+        }
+
+    #qiandan-select-result .result-area{
+      width: 100%;
+      background-color: #ffffff;
+    }
+    #qiandan-select-result .result-area ul {
+      height: 700px;
+      overflow: auto; }
+      #qiandan-select-result .result-area ul li {
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        margin-bottom: 10px; }
+        #qiandan-select-result .result-area ul li .select-name {
+          height: 30px;
+          line-height: 30px; }
+        #qiandan-select-result .result-area ul li .select-title {
+          height: 40px;
+          line-height: 40px; }
+          #qiandan-select-result .result-area ul li .select-title span {
+            display: inline-block;
+            font-size: 12px;
+            width: 100px;
+            line-height: 40px; }
+        #qiandan-select-result .result-area ul li .select-input {
+          height: 40px;
+          font-size: 0px; }
+         #qiandan-select-result .result-area ul li .select-input .c-datepicker-date-editor{
+          padding: 0px !important;
+          border: none;
+          }
+          #qiandan-select-result .result-area ul li .select-input input {
+            line-height: 30px;
+            font-size: 12px;
+            width: 90px;
+            border: 1px solid #cccccc;
+            margin-right: 10px;
+             }
+

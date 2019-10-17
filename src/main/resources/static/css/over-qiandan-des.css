@@ -1,0 +1,50 @@
+#over-qiandan-des .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px;
+  margin-bottom: 15px; }
+  #over-qiandan-des .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#over-qiandan-des .qiandan-add-content {
+  padding: 0px 20px; }
+  #over-qiandan-des .qiandan-add-content .input-block {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    margin-bottom: 15px;
+    padding-left: 80px;
+    min-height: 40px; }
+    #over-qiandan-des .qiandan-add-content .input-block .name {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      height: 40px;
+      line-height: 40px;
+      width: 80px; }
+    #over-qiandan-des .qiandan-add-content .input-block .word {
+      color: #878787;
+      line-height: 40px; }
+  #over-qiandan-des .qiandan-add-content .table-area table {
+    width: 100%;
+    border-collapse: collapse; }
+    #over-qiandan-des .qiandan-add-content .table-area table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #over-qiandan-des .qiandan-add-content .table-area table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #over-qiandan-des .qiandan-add-content .table-area table tr td .delete, #over-qiandan-des .qiandan-add-content .table-area table tr td .des, #over-qiandan-des .qiandan-add-content .table-area table tr td .jiedan {
+        margin: 0px 5px;
+        cursor: pointer; 
+      color: #5595d6;}
+

@@ -1,0 +1,43 @@
+
+#select-menu-box .box-content{
+    width:700px;
+    /* height: 400px; */
+    overflow:auto;
+    margin-left:-350px;
+    top:100px;
+}
+#select-menu-box .box-content .middle{
+    height: 300px;
+    overflow:auto;
+    
+}
+#select-menu-box .middle .t-area table {
+    width: 100%;
+    /* height: 300px; */
+    overflow:auto;
+    border-collapse: collapse; }
+    #select-menu-box .middle .t-area{
+        width:100%;
+        /* float: left; */
+    }
+    /* .export-area{
+        width:100px;
+        text-align: center;
+        float:right;
+        height: 300px;
+        line-height: 300px;
+        background-color:#FAFAFA;
+    } */
+    #select-menu-box .middle .t-area table tr th {
+      text-align: center;
+      height: 30px;
+      font-weight: bold;
+      color: #888888;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #select-menu-box .middle .t-area table tr td {
+      text-align: center;
+      height: 30px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }

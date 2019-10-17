@@ -1,0 +1,23 @@
+.public-loading .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+.public-loading .loading {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  margin-left: -50px;
+  margin-top: -50px;
+  z-index: 20; }
+  .public-loading .loading .fa-spinner {
+    font-size: 30px;
+    color: #ffffff; }

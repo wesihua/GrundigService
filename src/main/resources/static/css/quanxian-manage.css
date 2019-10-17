@@ -1,0 +1,27 @@
+#quanxian-manage .q-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+
+#quanxian-manage .q-m-content {
+  padding: 0px 20px; }
+  #quanxian-manage .q-m-content .title {
+    line-height: 40px; }
+  #quanxian-manage .q-m-content ul li {
+    padding: 15px 0px; }
+    #quanxian-manage .q-m-content ul li .classA .pt {
+      margin-right: 5px; }
+    #quanxian-manage .q-m-content ul li .secondLevel {
+      margin-top: 10px;
+      padding-left: 30px; }
+      #quanxian-manage .q-m-content ul li .secondLevel div {
+        display: inline-block;
+        margin-right: 20px; }
+        #quanxian-manage .q-m-content ul li .secondLevel div .pt {
+          margin-right: 5px; }
+  #quanxian-manage .q-m-content .control-bottom {
+    text-align: center;
+    padding: 40px 0px 0px 0px; }
+    #quanxian-manage .q-m-content .control-bottom span {
+      margin: 0px 40px; }

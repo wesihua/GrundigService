@@ -1,0 +1,146 @@
+#qiandan-manage-box2 .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+#qiandan-manage-box2 .box-content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #ffffff;
+  width: 500px;
+  margin-left: -250px;
+  margin-top:-250px;
+  border-radius: 10px; }
+  #qiandan-manage-box2 .box-content .head {
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 20px; }
+    #qiandan-manage-box2 .box-content .head .title{
+      font-size: 14px;
+      font-weight: bold;
+    }
+    #qiandan-manage-box2 .box-content .head .fa-close {
+      float: right;
+      margin-top: 20px;
+      font-size: 20px;
+      cursor: pointer; }
+  #qiandan-manage-box2 .box-content .middle {
+    height: 300px;
+    overflow:auto;
+    padding: 20px; 
+  margin-bottom:10px;}
+    #qiandan-manage-box2 .box-content .middle .input-block {
+      min-height: 30px;
+      margin-bottom:15px;
+      font-size: 0px; }
+      #qiandan-manage-box2 .box-content .middle .input-block2{
+        min-height: 30px;
+        margin-bottom:15px;
+      }
+    #qiandan-manage-box2 .box-content .middle .input-block.small{
+        margin-bottom:5px;
+      }
+      #qiandan-manage-box2 .box-content .middle .tesu{
+        display: inline-block;
+        margin-right:17px;
+        width: 60px;
+        font-size: 12px;
+        vertical-align: 9px;
+      }
+      #qiandan-manage-box2 .box-content .middle .input-block .name {
+        display:inline-block;
+        margin-right: 20px;
+        width:60px;
+        font-size: 12px; }
+        #qiandan-manage-box2 .box-content .middle .input-block2 .name {
+          display:inline-block;
+          margin-right: 20px;
+          width:60px;
+          font-size: 12px; }
+        #qiandan-manage-box2 .box-content .middle .input-block .name.t {
+          vertical-align: top; }
+      #qiandan-manage-box2 .box-content .middle .input-block .pt, #qiandan-manage-box2 .box-content .middle .input-block .se {
+        font-size: 12px;
+        height: 30px;
+        width: 280px;
+         }
+         #qiandan-manage-box2 .box-content .middle .input-block  .c-datepicker-date-editor{
+           height:32px;
+          background-color: #f8f8f8;
+
+         }
+         #qiandan-manage-box2 .box-content .middle .input-block  .c-datepicker-date-editor .c-datepicker-data-input{
+          width: 248px;
+          background-color: #f8f8f8;
+         }
+      #qiandan-manage-box2 .box-content .middle .input-block .se option {
+        line-height:32px;
+        height: 32px; }
+      #qiandan-manage-box2 .box-content .middle .input-block .textarea {
+        vertical-align: top;
+        height: 100px;
+        width:281px;
+        line-height: 20px;
+        resize: none;
+        overflow: auto; }
+        #qiandan-manage-box2 .box-content .middle .input-block2 #workplaceCode{
+          display:inline-block;
+        }
+        #qiandan-manage-box2 .box-content .middle .input-block2 #workplaceCode .selectivity-single-select{
+          background-color: #f8f8f8;
+          border: 1px solid #dcdfe6;
+          height: 30px;
+          min-height: 30px;
+          padding: 0px;
+          border-radius: 5px;
+        }
+
+        #qiandan-manage-box2 .box-content .middle #firstId, #qiandan-manage-box2 .box-content .middle #secondId{
+          display:inline-block;
+          width:280px;
+          background-color: #f8f8f8;
+          height: 30px;
+          border: 1px solid #dbdcdd;
+          border-radius:5px;
+          margin-right:20px;
+          overflow: hidden;
+          outline: none;
+        }
+        #qiandan-manage-box2 .box-content .middle #secondId{
+          display: block;
+          /* margin-left:83px; */
+          margin:5px 0px 15px 81px;
+        }
+        #qiandan-manage-box2 .box-content .middle #firstId .selectivity-single-select,  #qiandan-manage-box2 .box-content .middle #secondId .selectivity-single-select{
+          background-color: #f8f8f8;
+          padding: 0px;
+        }
+        #qiandan-manage-box2 .box-content .middle #firstId .selectivity-single-select input,  #qiandan-manage-box2 .box-content .middle #secondId .selectivity-single-select input{
+          outline: none;
+          margin-right:0px;
+        }
+        #qiandan-manage-box2 .box-content .middle.selectivity-single-result-container{
+          top:0px !important;
+        }
+
+  #qiandan-manage-box2 .box-content .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #cccccc; }
+    #qiandan-manage-box2 .box-content .bottom span {
+      margin: 0px 20px; }
+      
+      
+#qiandan-manage-box2 .box-content .name i {
+    color: red;
+    vertical-align: middle;
+    line-height: 0px;
+    margin-right: 2px;
+}

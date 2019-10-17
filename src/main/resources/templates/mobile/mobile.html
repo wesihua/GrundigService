@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="yes" name="apple-mobile-web-app-capable"/>
+		<meta content="yes" name="apple-touch-fullscreen"/>
+		<meta content="telephone=no,email=no" name="format-detection"/>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<meta http-equiv="Expires" content="0"/>
+		<title>国文人力</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"/>
+		<link href="../css/public.css" rel="stylesheet" />
+		<link href="../css/font-awesome.min.css" rel="stylesheet" />
+		<script src="../js/jquery-3.3.1.min.js"></script>
+		<link href="../css/mobile.css" rel="stylesheet" />
+		<script src="../js/mobile/mobile.js"></script>
+	</head>
+	<body>
+		<div class="mobile-header"></div>
+		<div class="mobile-enter-area">
+			<div class="line-input"><span><i>*</i>姓名：</span><input id="name"/></div>
+			
+			<div class="line-input"><span><i>*</i>电话：</span><input id="telephone"/></div>
+			
+			<div class="line-input">
+				<span><i>*</i>性别：</span>
+				<select id="sex">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+			</div>
+			
+			<div class="line-input"><span>身份证号：</span><input id="idcard"/></div>
+			<div class="line-input"><span>邮箱：</span><input id="email"/></div>
+			<div class="line-input">
+				<span>学历：</span>
+				<select id="degree">
+					<option value="">选择学历</option>
+					<option value="1">小学</option>
+					<option value="2">初中</option>
+					<option value="3">高中</option>
+					<option value="4">专科</option>
+					<option value="5">本科</option>
+					<option value="6">硕士</option>
+					<option value="7">博士</option>
+					<option value="8">其他</option>
+				</select>
+			</div>
+			<div class="line-input">
+				<span>工作状态：</span>
+				<select id="work_status">
+					<option value="">选择工作状态</option>
+					<option value="1">女</option>
+				</select>
+			</div>
+			<div class="line-input">
+				<span>婚姻状况：</span>
+				<select id="marital_status">
+					<option value="">选择婚姻状况</option>
+					<option value="0">未婚</option>
+					<option value="1">已婚</option>
+					<option value="2">离异</option>
+					<option value="3">丧偶</option>
+				</select>
+			</div>
+			<div class="line-input"><span>期望职位：</span><input id="position"/></div>
+			<div class="line-input">
+				<span>期望薪资：</span>
+				<select id="expect_salary">
+					<option value="">选择期望薪资</option>
+					<option value="1">女</option>
+				</select>
+			</div>
+			<div class="line-input"><span>职称：</span><input id="title"/></div>
+			<div class="line-input"><span>联系地址：</span><textarea id="address"></textarea></div>
+			<div class="line-input"><span>个人简介：</span><textarea id="profile"></textarea></div>
+			<div class="line-input"><span>其他说明：</span><textarea id="description"></textarea></div>
+			
+		</div>
+		<div class="mobile-y" id="save">确定</div>
+		<!-- <div class="mobile-x">取消</div> -->
+	</body>
+</html>

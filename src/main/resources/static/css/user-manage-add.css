@@ -1,0 +1,101 @@
+
+#user-manage-add .party1 {
+  margin-bottom: 25px; }
+  #user-manage-add .party1 .base-info {
+    width: 380px;
+    float: left; }
+    #user-manage-add .party1 .base-info .inut-b {
+      position: relative;
+      left: 0px;
+      top: 0px;
+      height: 40px;
+      margin-bottom: 15px;
+      padding-left: 90px; }
+      #user-manage-add .party1 .base-info .inut-b .name {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 90px;
+        height: 40px;
+        line-height: 40px; }
+      #user-manage-add .party1 .base-info .inut-b .inputValue {
+        width: 290px;
+        line-height: 40px;
+        background-color: #e8e8e8;
+         }
+  #user-manage-add .party1 .jianjie {
+    width: 500px;
+    float: right; }
+    #user-manage-add .party1 .jianjie .name {
+      width: 50px;
+      height: 40px;
+      line-height: 40px;
+      float: left; }
+    #user-manage-add .party1 .jianjie .textarea {
+      width: 430px;
+      padding: 10px;
+      background: #e8e8e8;
+      line-height: 20px;
+      height: 300px;
+      resize: none; }
+
+#user-manage-add .party2 {
+  margin-bottom: 40px; }
+  #user-manage-add .party2 .nav-tip {
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 20px; }
+    #user-manage-add .party2 .nav-tip .name {
+      display: inline-block;
+      width: 90px; }
+    #user-manage-add .party2 .nav-tip .button {
+      display: inline-block;
+      line-height: 40px;
+      padding: 0px 20px;
+      background: #5595d6;
+      color: #FFFFFF;
+      border-radius: 5px;
+      cursor: pointer; }
+  #user-manage-add .party2 .history {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    padding-left: 90px;
+    margin-bottom: 15px; }
+    #user-manage-add .party2 .history ul {
+      background-color: #e8e8e8;
+      padding: 10px 20px; }
+      #user-manage-add .party2 .history ul li {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        padding-left: 80px; }
+        #user-manage-add .party2 .history ul li .name {
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 80px;
+          line-height: 40px; }
+        #user-manage-add .party2 .history ul li .content {
+          padding-top: 10px;
+          display: inline-block;
+          line-height: 22px; }
+
+#user-manage-add .footer-button {
+  text-align: center; }
+  #user-manage-add .footer-button span {
+    margin: 0px 40px;
+    padding: 0px 30px;
+    border-radius: 5px;
+    cursor: pointer; }
+  #user-manage-add .footer-button span.qx {
+    display: inline-block;
+    border: 1px solid #e8e8e8;
+    line-height: 40px; }
+  #user-manage-add .footer-button span.qd {
+    display: inline-block;
+    background-color: #5595d6;
+    color: #FFFFFF;
+    line-height: 40px; }
+
+    

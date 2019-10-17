@@ -1,0 +1,333 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px; }
+
+ul, li {
+  list-style: none; }
+
+input, textarea {
+  border: none; 
+  text-indent:15px;
+}
+
+body {
+  font-size: 12px;
+  color: #333;
+  overflow: auto;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
+  background-color: #f8f8f8; }
+
+input,select, textarea {
+  background-color:#f8f8f8;
+  border:1px solid #dcdfe6;
+  border-radius:5px;
+  outline: none; }
+
+/*清除浮动*/
+.clearFix {
+  *zoom: 1; }
+
+.clearFix:after {
+  display: table;
+  content: '';
+  clear: both; }
+
+#main {
+  min-width: 1130px;
+  padding-left:190px;
+  margin: 0px auto; }
+
+#nav {
+  float:left;
+  margin-left:-190px;
+  width: 170px;
+  float: left;
+  /* background: #474b4d; */
+  background: rgb(45, 58, 75);
+  color: #ffffff; 
+    font-size: 14px;
+  }
+  #nav ul {
+    list-style: none; }
+    #nav ul li {
+      list-style: none; }
+      #nav ul li .f {
+        padding-left: 40px;
+        height: 40px;
+        line-height: 40px;
+        cursor: pointer; }
+         #nav ul li .f .fa{
+          font-size:16px;
+          float:right;
+          margin-right:10px;
+          line-height: 40px;
+        }
+        #nav ul li .f.on, #nav ul li .f:hover {
+          background-color: #222222;
+    color: #ffda00; }
+      #nav ul li .s .s-n {
+        padding-left: 60px;
+        line-height: 40px;
+        cursor: pointer; }
+        #nav ul li .s .s-n.on, #nav ul li .s .s-n:hover {
+          background-color: #222222;
+          color: #ffda00; }
+      #nav ul li .s .t .t-a {
+        padding-left: 60px;
+        line-height: 30px;
+        cursor: pointer; }
+        #nav ul li .s .t .t-a.on, #nav ul li .s .t .t-a:hover {
+          background-color: #222222;
+    color: #ffda00;}
+      #nav ul li .s .t .t-b {
+        padding-left: 70px;
+        line-height: 40px;
+        cursor: pointer; }
+        #nav ul li .s .t .t-b.on, #nav ul li .s .t .t-b:hover {
+          background-color: #222222;
+    color: #ffda00;}
+
+#header {
+  height: 80px;
+  background: #ffffff;
+  margin-bottom:8px;
+  min-width: 1300px;
+  border-bottom: 1px solid #eaeaea; }
+  #header .header-content {
+    min-width: 1100px;
+    height: 80px;
+    line-height: 80px;
+    margin: 0px auto; 
+    border-top: 1px solid #4caf50;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.3), 0 0 10px 1px rgba(0,0,0,0.15);
+    background: rgba(255,255,255,0.94);
+    /* background-color: #ccc; */
+  padding:0px 50px;}
+    #header .header-content .logo{
+      width:55px;
+      height:55px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    #header .header-content .logo-word{
+      font-size:20px;
+      font-weight: normal;
+      font-style:italic;
+      color: #667290;
+    }
+    #header .header-content .person-info {
+      float: right;
+       }
+      #header .header-content .person-info .name {
+        font-size: 18px;
+        margin-right: 5px;
+        font-weight: bold;
+      }
+      #header .header-content .person-info .login-out {
+        cursor: pointer;
+        font-size: 16px; }
+        #header .header-content .person-info .login-out .fa-sign-out{
+          margin-right:5px;
+          font-size: 16px;
+        }
+        #header .header-content .person-info .login-out:hover{
+          color:#409eff;
+        }
+
+#content {
+  width:auto;
+  background: #ffffff;
+  min-height: 100px;
+  padding-bottom: 50px; }
+  #content #content-nav {
+    height: 60px;
+    line-height: 60px;
+    padding: 0px 20px 0px;
+    border-bottom: 1px solid #d5d5d5;
+    margin-bottom: 20px; }
+    #content #content-nav .name {
+      font-weight: bold; 
+      font-size:16px;
+    }
+    #content #content-nav .control {
+      float: right;
+      margin-top:13px;
+      margin-left: 30px;
+      cursor: pointer; }
+  #content #content-area {
+    padding: 0px 20px 0px; }
+
+#public-fanye, .public-fanye {
+  height: 34px;
+  margin-top: 30px; }
+  #public-fanye .f-content, .public-fanye .f-content {
+    float: right; }
+    #public-fanye .f-content input, .public-fanye .f-content input {
+      height: 24px !important;
+      line-height: 24px;
+      text-align: center;
+      border: 1px solid #c5b7b7; 
+      background-color: #ffffff;}
+  #public-fanye .page, .public-fanye .page {
+    margin: 0px !important; }
+  #public-fanye .info, .public-fanye .info {
+    display: none; }
+    #public-fanye .info.f1, .public-fanye .info.f1 {
+      display: none; }
+
+#public-bottom1, .public-bottom1 {
+  display: inline-block;
+  border-radius: 5px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #313131;
+  padding: 0px 30px;
+  border: 1px solid #cccccc;
+  cursor: pointer; }
+
+#public-bottom2, .public-bottom2 {
+  display: inline-block;
+  border-radius: 5px;
+  height: 30px;
+  line-height:30px;
+  text-align: center;
+  color: #409eff;
+    background: #ecf5ff;
+    border:1px solid  #b3d8ff;
+  padding: 0px 30px;
+  cursor: pointer; }
+
+  #public-bottom2 .fa, .public-bottom2 .fa{
+    font-style:normal;
+    margin-right:5px;
+    vertical-align: middle;
+ }
+
+  #public-bottom2:hover,.public-bottom2:hover, #public-bottom2.on,.public-bottom2.on{
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+  }
+
+.public-small-bottom {
+  display: inline-block;
+  border-radius: 5px;
+  height:30px;
+  line-height: 30px;
+  text-align: center;
+  color: #409eff;
+    background: #ecf5ff;
+    border:1px solid  #b3d8ff;
+  padding: 0px 15px;
+  cursor: pointer;
+}
+.public-small-bottom.h42{
+  height:30px;
+  line-height:30px;
+}
+.public-small-bottom .fa{
+   font-style:normal;
+   margin-right:5px;
+}
+
+  .public-small-bottom:hover,.public-small-bottom.on{
+    color: #fff;
+    background-color: #409eff;
+    border-color: #409eff;
+  }
+
+ 
+/* 每个页面正页的导航 */
+  .public-single-page-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom:1px solid #dbdbdb;
+  padding: 0px 20px; 
+  margin-bottom: 20px;
+}
+  .public-single-page-nav  .title{
+    font-size:16px;
+    font-weight:bold;
+  }
+  .public-single-page-nav  .public-small-bottom {
+    float: right;
+    margin-left: 30px;
+    margin-top:13px;
+    cursor: pointer; }
+
+    /* 页面底部提交按钮 */
+
+  .public-page-submit-area {
+      padding:20px 0px;
+      border-top:1px solid #dcdfe6;
+      text-align: center; }
+  .public-page-submit-area span {
+      margin: 0px 40px;
+      padding: 0px 30px;
+      border-radius: 5px;
+      cursor: pointer; }
+
+      /* 页面table 换色 */
+
+table tr:nth-of-type(odd){}
+table tr:nth-of-type(even){background-color: #FAFAFA;}
+table tr:hover td{background: #e5e5e5;}
+table tr{
+  cursor: default;
+}
+table tr:hover td{background: #eeeeee;}
+/* 时间窗口的table颜色不需要变 */
+.c-datepicker-picker__content table tr:nth-of-type(even){background-color: #ffffff;}
+.c-datepicker-picker__content table tr:hover td{background: #ffffff;}
+
+
+
+/* 弹框公共部分 */
+.public-box-css .mask {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.5; }
+
+  .public-box-css .box-content {
+  position: fixed;
+  left: 50%;
+  /* top: 50%; */
+  background-color: #ffffff;
+  border-radius: 10px; }
+  .public-box-css .box-content .head {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #cccccc;
+    padding: 0px 20px; }
+    .public-box-css .box-content .head .title{
+    font-size: 14px;
+    font-weight: bold; }
+
+    .public-box-css .box-content .head .fa-close {
+      float: right;
+      margin-top: 10px;
+      font-size: 20px;
+      cursor: pointer; }
+      .public-box-css .box-content .head .fa-close:hover{
+        color:#409eff;
+      }
+  .public-box-css .box-content .middle {
+    padding: 20px;
+   }
+
+    .public-box-css .box-content .bottom {
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    border-top: 1px solid #cccccc; }
+    .public-box-css .box-content .bottom span {
+      margin: 0px 20px; }

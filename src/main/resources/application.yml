@@ -1,0 +1,57 @@
+spring: 
+  application: 
+   name: GrundigService
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss #解决restcontroller中日期类型不正确
+    time-zone: GMT+8 #指定时区，解决时间差
+  http:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 100Mb
+  datasource:
+    url: jdbc:mysql://47.97.100.29:3306/workersystem_yx?characterEncoding=UTF-8
+    username: root
+    password: weisihua
+    driver-class-name: com.mysql.jdbc.Driver
+    initial-size: 5
+    max-active: 5
+    min-idle: 5
+    max-wait: 60000
+  resources: 
+    static-locations: classpath:/static
+  aop:
+    auto: true #aop支持
+  thymeleaf: 
+    prefix: classpath:/templates/
+
+#logging:
+#  file: console.log
+server:
+  port: 8080
+  #ssl: 
+  #  key-store: classpath:keystore.p12
+  #  key-store-password: 123456
+  #  keyStoreType: PKCS12
+  #  keyAlias: tomcat
+  tomcat: 
+    uri-encoding: UTF-8
+    
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  configuration: 
+   log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  
+#自定义属性
+redis:
+  host: 47.97.100.29
+  port: 6379
+  password: weisihua
+  database: 0
+  connectionTimeout: 5000
+  minIdle: 32
+  maxIdle: 64
+  maxTotal: 128
+  testOnBorrow: true
+
+    
+    

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>签约用工列表</title>
+<link href="../static/css/public.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../static/css/add-worker-box.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/signing/addWorker.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+</head>
+<body>
+    <div id="add-worker-box-wp">
+        <div class="mask"></div>
+
+    <div class="add-worker-box-content" class="clearFix">
+        <div class="head"><span class="title">选择用工</span><span class="fa fa-close"></span></div>
+        <div id="add-worker-box" >
+            <!-- <div class="public-single-page-nav">
+                <span class="title">选择用工</span>
+            </div> -->
+            <div class="qiandan-content">
+                <div class="wait-handle">
+                    <div class="search-area clearFix">
+                        <input placeholder="搜索姓名" class="" id="workerName"/>
+                        <input placeholder="搜索手机号" class="" id="telephone"/>
+                        <input placeholder="搜索身份证号" class="" id="idcard"/>
+                        <span class="public-bottom2 select-worker">查询</span>
+                    </div>
+                    <div class="table-area">
+                        <table cellpadding="0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th width="90">姓名</th>
+                                    <th width="160">身份证号</th>
+                                    <th width="60">籍贯</th>
+                                    <th width="">擅长工种</th>
+                                    <th width="150">工资要求（元）</th>
+                                    <th width="100">工作地区</th>
+                            
+                                    <th width="100">选择</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                            </table>
+                    </div>
+                    
+                    <!-- 分页处理部分 -->
+                    <div class="public-fanye">
+                            <span class="result" id="totalCount">103个结果</span>
+                            <div class="f-content">
+                                <div id="pagination1" class="page fl"></div>
+                                <div class="info fl">
+                                    <p>当前页数：<span id="current1">1</span></p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="control-botton">
+                    <span class="public-bottom1">取消</span>
+                    <span class="public-bottom2 addWorker">完成</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="qiandan-select-result">
+            <div class="result-area">
+                <ul>
+                      <li>
+                        <div class="select-name">张三（323233232323）</div>
+                        <div class="select-title">
+                            <span class="a">签约月工资（元)</span>
+                            <span class="b">到岗日期</span>
+                            <span class="c">业务收入（元）</span>
+                        </div>
+                        <div class="select-input">
+                            <input class="a" type="text"/>
+                            <input class="b" type="text"/>
+                            <input class="c" type="text"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="select-name">张三（323233232323）</div>
+                        <div class="select-title">
+                            <span class="a">签约月工资（元)</span>
+                            <span class="b">到岗日期</span>
+                            <span class="c">业务收入（元）</span>
+                        </div>
+                        <div class="select-input">
+                            <input class="a" type="text"/>
+                            <input class="b" type="text"/>
+                            <input class="c" type="text"/>
+                        </div>
+                    </li>
+                    
+                </ul>
+                </div>
+
+            
+        </div>
+            
+    </div>
+
+</div>
+	<input type="hidden" name="jobTypeId" th:value="${jobTypeId}"/>
+</body>
+</html>

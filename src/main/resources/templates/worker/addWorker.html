@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+<link href="../css/user-manage-control.css" rel="stylesheet" />
+
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/user-manage.css" rel="stylesheet" />
+<link rel="stylesheet" href="../datepicker/css/datepicker.css" />
+<link rel="stylesheet" href="../selectivity/selectivity-jquery.css"/>
+<link href="../css/juese-manage-box2.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../selectivity/selectivity-jquery.js"></script>
+<script src="../js/worker/addWorker.js"></script>
+</head>
+
+<body>
+<input type="hidden" id="workerId"/>
+	<div id="content">
+		<div id="content-nav">
+			<span class="name">新增人才</span>
+			<span class="control public-small-bottom" id="back"><i class="fa  fa-arrow-circle-left"></i>返回</span>
+		</div>
+		<div id="content-area">
+			<div id="user-manage-control">
+				<div class="party1 clearFix">
+					<div class="base-info">
+						<div class="inut-b">
+							<span class="name"><i>*</i>姓名</span> <input class="inputValue" id="name"/>
+						</div>
+						<div class="inut-b">
+							<span class="name"><i>*</i>联系电话</span> <input class="inputValue" id="telephone"/>
+						</div>
+						<div class="inut-b">
+							<span class="name"><i>*</i>性别</span>
+							<select name="" class="selectControl" id="sex">
+								<option value="0">男</option>
+							</select>
+						</div>
+						
+						<div class="inut-b">
+							<span class="name">身份证号</span> <input class="inputValue" id="idcard"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">工作年限</span> 
+							<input class="inputValue" id="workYear"
+							onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+							placeholder="请输入数字"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">婚姻状态</span> 
+							<select name="" class="selectControl" id="maritalStatus">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">工资要求</span>
+							<select name="" class="selectControl" id="expectSalary">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">工作状态</span> 
+							<select name="" class="selectControl" id="workStatus">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">语言能力</span> 
+							<select name="" class="selectControl" id="languageLevel">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">接受夜班</span> 
+							<select name="" class="selectControl" id="nightWork">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b" style="height:40px;">
+							<span class="name">籍贯</span>
+							<!-- <select name="" class="selectControl mt" id="province">
+								<option value="">请选择</option>
+							</select>
+							
+							<select name="" class="selectControl" id="birthplaceCode">
+								<option value="">请选择</option>
+							</select> -->
+							<div id="birthplaceCode"></div>
+						</div>
+						<div class="inut-b">
+							<span class="name">工作地区</span>
+							<!-- <select name="" class="selectControl mt" id="province2">
+								<option value="">请选择</option>
+							</select>
+							
+							<select name="" class="selectControl" id="workplaceCode">
+								<option value="">请选择</option>
+							</select> -->
+							<div id="workplaceCode"></div>
+						</div>
+						<div class="inut-b">
+							<span class="name">开户行</span> <input class="inputValue" id="bank"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">银行卡号</span> <input class="inputValue" id="bankAccount"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">代理人</span> <input class="inputValue" id="agent"/>
+						</div>
+					</div>
+					<div class="base-info">
+						<div class="inut-b">
+							<span class="name">邮箱</span> <input class="inputValue" id="email"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">学历</span>
+							<select name="" class="selectControl" id="current_degree">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">民族</span>
+							<select name="" class="selectControl" id="nation">
+								<option value="">---请选择---</option>
+							</select>
+						</div>
+						<div class="inut-b">
+							<span class="name">职称</span> <input class="inputValue" id="title"/>
+						</div>
+						
+						<div class="inut-b">
+							<span class="name">擅长工种</span> 
+							<!-- <input class="inputValue" readonly="readonly" id="jobtype"/>
+							<input type="hidden" id="jobtype_value" /> -->
+							<div id="jobtype_new"></div>
+						</div>
+						<div class="inut-b">
+							<span class="name">期望职位</span> <input class="inputValue" id="position"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">联系地址</span> <input class="inputValue" id="address"/>
+						</div>
+						<div class="inut-b">
+							<span class="name">出生日期</span> 
+							<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+								<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+								<input type="text" autocomplete="off" placeholder="选择出生日期" readonly="readonly" class="c-datepicker-data-input" id="birthday" />
+							</div>
+						</div>
+						<div class="inut-b">
+							<span class="name">工作意向</span>
+							<input class="inputValue" id="workExpect"/>
+						</div>
+						<div class="jianjie">
+							<span class="name">个人简介</span>
+							<textarea class="textarea" id="profile"></textarea>
+						</div>
+						<div class="jianjie">
+							<span class="name">备注</span>
+							<textarea class="textarea" id="description"></textarea>
+						</div>
+						
+					</div>
+
+				</div>
+				<div class="party2" id="education-list">
+					<div class="nav-tip">
+						<sapn class="name">教育经历</sapn>
+						<span class="public-small-bottom" id="add-education"><i class="fa fa-plus"></i>添加</span>
+					</div>
+				</div>
+				<div class="party2" id="experience-list">
+					<div class="nav-tip">
+						<sapn class="name">工作经历</sapn>
+						<span class="public-small-bottom" id="add-experience"><i class="fa fa-plus"></i>添加</span>
+					</div>
+				</div>
+				<div class="footer-button">
+					<span class="public-bottom1" id="cancel">取消</span> 
+					<span class="public-bottom2 on" id="add-worker">确定</span>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- 选择工种弹窗 -->
+	<div id="dialog-jobtype-content" style="display: none;">
+		<div id="juese-manage-box2">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head">
+					<span class="title">选择工种</span><span class="close fa fa-close" id="close-dialog"></span>
+				</div>
+				<div class="middle" id="jobtype-content">
+					<div class="select">
+						<div class="s">
+							<div class="workType">
+								<input type="checkbox" /><span>一级菜单</span>
+							</div>
+						</div>
+						<div class="s two">
+							<div class="workType">
+								<input type="checkbox" /><span>二级</span>
+							</div>
+							<div class="workType">
+								<input type="checkbox" /><span>二级</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span> 
+					<span id="public-bottom2" class="public-bottom2 add-jobtype on">确定</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 教育经历弹窗 -->
+	<div id="dialog-education-content" style="display: none;">
+		<div id="user-manage-box2">
+			<div class="mask"></div>
+			<div class="box2-content">
+				<div class="head"><span class="title">教育经历</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<div class="input-block clearFix">
+						<span class="name"><i style="color:red;">*</i>学校</span>
+						<input class="pt" id="school"/>
+					</div>
+					<div class="input-block clearFix">
+						<span class="name"><i style="color:red;">*</i>学历</span>
+						<select class="select" id="degree">
+							<option value=""></option>
+						</select>
+				     </div>
+					<div class="input-block clearFix">
+						<span class="name">起止日期</span>
+						<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+							<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+							<input type="text" autocomplete="off" placeholder="选择年月" class="c-datepicker-data-input" id="beginTime" />
+						</div>
+						<span class="line"></span>
+						<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+							<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+							<input type="text" autocomplete="off" placeholder="选择年月" class="c-datepicker-data-input" id="endTime" />
+						</div>
+					</div>
+					<div class="input-block clearFix">
+						<span class="name">专业名称</span>
+						<input class="pt" id="discipline"/>
+					</div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 add-education-content on">完成</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 工作经历弹窗 -->
+	<div id="dialog-experience-content" style="display: none;">
+		<div id="user-manage-box3">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head"><span class="title">工作经历</span><span class="close fa fa-close" id="close-dialog"></span></div>
+				<div class="middle">
+					<div class="input-block clearFix">
+						<span class="name"><i style="color:red;">*</i>工作公司</span>
+						<input class="pt" id="exp_company"/>
+				     </div>
+					<div class="input-block clearFix">
+						<span class="name"><i style="color:red;">*</i>职位</span>
+						<input class="pt" id="exp_position"/>
+				     </div>
+				     <div class="input-block clearFix">
+						<span class="name">起止日期</span>
+						<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+							<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+							<input type="text" autocomplete="off" placeholder="选择年月" class="c-datepicker-data-input" id="exp_beginTime" />
+						</div>
+						<span class="line"></span>
+						<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+							<i class="c-datepicker-range__icon kxiconfont icon-clock"></i> 
+							<input type="text" autocomplete="off" placeholder="选择年月" class="c-datepicker-data-input" id="exp_endTime" />
+						</div>
+					</div>
+					<div class="input-block clearFix">
+						<span class="name">月工资&nbsp;&nbsp;&nbsp;</span>
+						<select class="select" id="exp_salary">
+							<option value=""></option>
+						</select>
+					</div>
+					
+					<div class="input-block clearFix">
+						<span class="name t">工作内容</span>
+						<textarea class="workText" name="" id="exp_description"></textarea>
+					</div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class=" public-bottom1 cancel-dialog">取消</span>
+					<span id="public-bottom2" class="public-bottom2 on add-experience-content">完成</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

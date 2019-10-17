@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>账号管理</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../css/account-manage.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../datepicker/css/datepicker.css"/>
+
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../js/report/companyReport.js"></script>
+</head>
+<body>
+	<div id="content">
+		<div id="account-manage">
+			<div class="a-m-nav">
+				<span class="title">企业订单报表查询</span> 
+				<span class="control public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+				<!-- <span class="public-small-bottom control" id="add-company"><i class="fa fa-plus"></i>新增企业</span> -->
+			</div>
+			<div class="a-m-content">
+				<div class="input-area">
+					<input class="pt" placeholder="企业名称" id="companyName"/>
+					<div class="c-datepicker-date-editor J-datepicker-range mt10">
+			          <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+			          <input placeholder="开始日期" name="" class="c-datepicker-data-input" id="startDate"/>-
+			          <input placeholder="结束日期" name="" class="c-datepicker-data-input" id="endDate"/>
+			        </div>
+					<span id="query-bottom" class="public-small-bottom h42" ><i class="fa fa-search"></i>查询</span>
+				</div>
+				<div class="select2">
+					
+				</div>
+				<table cellpadding="0" cellspacing="0" id="order_table">
+					<thead>
+						<tr>
+							<th>企业名称</th>
+							<th>订单数量</th>
+							<th>已签订人数</th>
+							<th>已签订金额</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<div id="public-fanye">
+					<span class="result" id="totalCount"></span>
+					<div class="f-content">
+						<div id="pagination1" class="page fl"></div>
+						<div class="info fl">
+							<p>
+								当前页数：<span id="current1">1</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>国文人力</title>
+<link href="css/public.css" rel="stylesheet" />
+<link href="css/login.css" rel="stylesheet" />
+<link href="css/public-box2.css" rel="stylesheet" />
+<link href="css/font-awesome.min.css" rel="stylesheet" />
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script src="js/login.js"></script>
+</head>
+<body>
+	<div id="login">
+		<div class="login-area-bg"></div>
+		<div class="login-area">
+			<div class="head-pic-bg"></div>
+			<div class="head-pic">
+				<div class="company-logo"><img src="image/logo.png"/></div>
+				<div class="company-wd">国文人力</div>
+			</div>
+			<div class="form-info">
+				<h1>登录</h1>
+				<div class="input-a"><input autocomplete="off" id="username" placeholder="请输入用户名" /></div>
+				<div class="input-a"><input autocomplete="off" id="password" type="password" placeholder="请输入密码" /></div>
+				<div class="tip">忘记密码请联系管理人员</div>
+				<div class="submit">登录</div>
+			</div>
+	    </div>
+	</div>
+	
+<!-- alert提示框 -->
+<div id="public-box2" style="display:none;">
+	<div class="mask"></div>
+	<div class="box-content">
+		<div class="head"><span class="title">提示</span><span class="close fa fa-close" id="alert_close"></span></div>
+		<div class="middle">
+			<div class="box-word" id="alert_msg">提示文字</div>
+		</div>
+		<div class="bottom">
+			<span id="public-bottom2">确定</span>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+#chengyuan-manage .a-m-nav {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #cccccc;
+  padding: 0px 20px; }
+  #chengyuan-manage .a-m-nav .control {
+    float: right;
+    margin-left: 30px;
+    cursor: pointer; }
+
+#chengyuan-manage .a-m-content {
+  padding: 0px 20px; }
+  #chengyuan-manage .a-m-content .input-area {
+    height: 80px;
+    line-height: 80px; }
+    #chengyuan-manage .a-m-content .input-area .pt {
+      width: 200px;
+      height: 40px;
+      background-color: #f8f8f8;
+      margin-right: 20px;
+       }
+    #chengyuan-manage .a-m-content .input-area #public-bottom2 {
+      float: right;
+      margin-top: 20px; }
+  #chengyuan-manage .a-m-content table {
+    width: 100%;
+    border-collapse: collapse; }
+    #chengyuan-manage .a-m-content table tr th {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 14px; }
+    #chengyuan-manage .a-m-content table tr td {
+      text-align: center;
+      height: 40px;
+      font-weight: normal;
+      border: 1px solid #e2e2e2;
+      font-size: 12px; }
+      #chengyuan-manage .a-m-content table tr td .delete, #chengyuan-manage .a-m-content table tr td .des {
+        margin: 0px 5px;
+        cursor: pointer; 
+      color: #5595d6;}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>新增需求单</title>
+<link href="../css/public.css" rel="stylesheet" />
+<link href="../css/font-awesome.min.css" rel="stylesheet" />
+<link href="../datepicker/css/datepicker.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage-add.css" rel="stylesheet" />
+<link href="../css/qiandan-manage-box2.css" rel="stylesheet" />
+<link href="../css/jquery.pagination.css" rel="stylesheet" />
+<link rel="stylesheet" href="../selectivity/selectivity-jquery.css"/>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../js/signing/addDemand.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<script src="../selectivity/selectivity-jquery.js"></script>
+</head>
+<body>
+	<div id="content">
+	    <input type="hidden" name="demandId" th:value="${demandId}"/>
+		<div id="qiandan-manage-add">
+			<div class="public-single-page-nav">
+				<span class="title" id="title-name">新增需求单</span>
+				<span class="control public-small-bottom" id="back" onclick="window.history.go(-1)">  <i class="fa  fa-arrow-circle-left"></i> 返回</span>
+			</div>
+			<div class="qiandan-add-content">
+				<div class="input-block">
+					<span class="name"><i>*</i>企业客户</span>
+					<div id="companyName" class="company"></div>
+					
+					<!-- <input placeholder="搜索企业名称" class="" id="companyName" name="companyName"/>
+					<input type="hidden" class="" id="companyId" name="companyId"/>
+					<div class="lenove-list" id="companyList" style="display: none;">
+						<div class="li"  onclick="changCompany(id,name)"></div>
+					</div> -->
+				</div>
+				<div class="input-block">
+					<span class="name"><i>*</i>备注说明</span>
+					<textarea id="description"></textarea>
+				</div>
+				<div class="input-block">
+					<span class="name">签约用工</span><span class="public-small-bottom" onclick="addJob()"><i class="fa fa-plus"></i>添加用工</span>
+				</div>
+				<div class="table-area">
+					<table cellpadding="0" cellspacing="0">
+						<tr>
+							<th>用工工种</th>
+							<th>用工人数</th>
+							<th>到岗日期</th>
+							<th>月工资（元）</th>
+							<th>工作地区</th>
+							<th>性别要求</th>
+							<th>学历要求</th>
+							<th>年龄要求</th>
+							<th>专业要求</th>
+							<th width="220">用工要求</th>
+							<th width="150">操作</th>
+						</tr>
+					<!--  	<tr class="tr-body">
+							<td>水电工</td>
+							<td>11</td>
+							<td>2018-09-01</td>
+							<td>300</td>
+							<td>33300</td>
+							<td>江苏南京</td>
+							<td><span class="des" onclick="editJob(this)">编辑</span><span class="delete" onclick="deleteJob(this)">移除</span></td>
+						</tr> -->
+					</table>
+				</div>
+				<div class="control-botton">
+					<span class="public-bottom1" onclick="window.history.go(-1)" >取消</span> <span id="add-demand-bottom" class="public-bottom2 on" onclick="addDemand()">完成</span>
+				</div>
+
+			</div>
+		</div>
+    <div id="add-job-dialog" style="display:none;">
+		<div id="qiandan-manage-box2">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head"><span class="title">添加用工</span><span class="close fa fa-close" id="close-dialog"></span>
+				</div>
+				<div class="middle">
+				
+					<span class="name tesu"><i>*</i>用工工种</span>
+				    <div id="firstId"></div>
+				    <div id="secondId"></div>
+					<input  id="parentJobTypeId" type="hidden"/>
+					<input  id="jobTypeId" type="hidden"/>
+					<input  id="jobTypeName" type="hidden"/>
+					<!--
+					<div class="input-block">
+						<select class="se" id="jobType">
+							 <option value=""></option>
+						</select>
+						
+					</div>
+					<div class="input-block">
+						<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+						<select class="se" id="jobTypeList">
+							 <option value=""></option>
+						</select>
+					</div>
+					--> 
+					<div class="input-block">
+						<span class="name"><i>*</i>用工人数</span>
+						<input class="pt" id="workerCount" onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" 
+						onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}"
+						/>
+					</div>
+					<div class="input-block">
+						<span class="name">到岗日期&nbsp;&nbsp;</span>
+						<div class="c-datepicker-date-editor c-datepicker-single-editor J-yearMonthPicker-single mt10">
+								<input autocomplete="off" style="text-indent:0px;" type="text" placeholder="选择到岗日期" class="pt c-datepicker-data-input" id="requireTime" name="createTime"/>
+						</div>
+					</div>
+					<div class="input-block">
+						<span class="name">月工资&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input
+							class="pt" id="salary"
+							onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value = this.value.replace(/[^\d.]/g,''); this.value = this.value.replace(/^\./g,'');this.value = this.value.replace(/\.{2,}/g,'');this.value = this.value.replace('.','$#$').replace(/\./g,'').replace('$#$','.');this.value = this.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');}"
+							onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value = this.value.replace(/[^\d.]/g,''); this.value = this.value.replace(/^\./g,'');this.value = this.value.replace(/\.{2,}/g,'');this.value = this.value.replace('.','$#$').replace(/\./g,'').replace('$#$','.');this.value = this.value.replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3');}"
+							/>
+					</div>
+					<div class="input-block2">
+						<span class="name" style="">工作地区&nbsp;&nbsp;</span><div id="workplaceCode" style="width: 280px;"></div>
+						<input  id="workArea" type="hidden"/>
+						<input  id="workAreaName" type="hidden"/>
+					</div>
+					<!-- 
+					<div class="input-block small">
+						<span class="name">工作地区&nbsp;&nbsp;</span> 
+						<select class="se" id="province">
+							 <option value="1">1</option>
+						</select>
+					</div>
+					<div class="input-block">
+						<span class="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> 
+						<select class="se" id="workAreaList">
+							 <option value="1">1</option>
+						</select>
+						<input  id="parentCode" type="hidden"/>
+					</div>
+					--> 
+					<div class="input-block">
+						<span class="name">性别要求&nbsp;&nbsp;</span> 
+						<select class="se" id="gender">
+							<!--  <option value="1">1</option>-->
+						</select>
+						<input  id="genderName" type="hidden"/>
+					</div>
+					<div class="input-block">
+						<span class="name">学历要求&nbsp;&nbsp;</span> 
+						<select class="se" id="degree">
+							<!--  <option value="1">1</option>-->
+						</select>
+						<input  id="degreeName" type="hidden"/>
+					</div>
+					<div class="input-block">
+						<span class="name">年龄要求&nbsp;&nbsp;</span><input
+							class="pt" id="age"/>
+					</div>
+					<div class="input-block">
+						<span class="name">专业要求&nbsp;&nbsp;</span><input
+							class="pt" id="major"/>
+					</div>
+					
+					<div class="input-block">
+						<span class="name">用工要求</span>
+						<textarea class="textarea" id="requirement"></textarea>
+					</div>
+				</div>
+				<div class="bottom">
+					<span id="public-bottom1" class="public-bottom1 cancel-dialog">取消</span> 
+					<span id="public-bottom2" class="public-bottom2 on add-job-type-content">完成</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

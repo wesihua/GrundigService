@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>签单管理</title>
+<link href="../css/public.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage.css" rel="stylesheet"/>
+<link href="../css/jquery.pagination.css" rel="stylesheet"/>
+<link href="../datepicker/css/datepicker.css" rel="stylesheet"/>
+<link href="../css/qiandan-manage-box1.css" rel="stylesheet"/>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.pagination.min.js"></script>
+<script src="../datepicker/js/plugins/moment.min.js"></script>
+<script src="../datepicker/js/datepicker.all.js"></script>
+<!-- <script src="../js/common.js"></script>  -->
+<script src="../js/signing/demand.waiting.js"></script>
+
+</head>
+<body>
+	<div id="content">
+		<div id="qiandan-manage">
+			<div class="public-single-page-nav">
+				<span class="title">待处理需求单</span> 
+				<span class="public-small-bottom" onclick="addDemand()"><i class="fa fa-plus"></i>新增需求单</span> 
+				<span class="public-small-bottom" id="download"><i class="fa fa-cloud-download"></i>导出列表</span>
+			</div>
+			<div class="qiandan-content">
+				<!--<ul class="qiandan-nav">
+					<li class="on" onClick="stateChange(this)" state="0">待处理（<span id="count-state-0">0</span>）</li>
+					<li onClick="stateChange(this)" state="1">处理中（<span id="count-state-1">0</span>）</li>
+					<li onClick="stateChange(this)" state="2">已签约（<span id="count-state-2">0</span>）</li>
+					<li onClick="stateChange(this)" state="3">已结束（<span id="count-state-3">0</span>）</li>
+				</ul>  -->
+				<!-- 待处理部分 -->
+				<div class="wait-handle" >
+					<div class="search-area clearFix">
+						
+						<div class="lenove-area">
+							<input placeholder="企业名称" class="" id="companyName" name="companyName"/>
+						</div>
+						
+						<div class="lenove-area">
+							<input placeholder="招聘编号" class="" id="demandNo" name="demandNo"/>
+						</div>
+						<div class="c-datepicker-date-editor J-datepicker-range mt10">
+				          <i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+				          <input placeholder="创建开始时间" name="" style="width: 140px;" class="c-datepicker-data-input" id="beginTime"/>-
+				          <input placeholder="创建结束时间" name="" style="width: 140px;" class="c-datepicker-data-input" id="endTime"/>
+				        </div>
+						
+						<span id="query-bottom" class="public-small-bottom h42"><i class="fa fa-search"></i>查询</span>
+						<input name="state" type="hidden" value="0"/>
+					</div>
+					<div class="table-area">
+						<table cellpadding="0" cellspacing="0">
+						</table>
+					</div>
+
+					<!-- 分页处理部分 -->
+					<div class="public-fanye">
+						<span class="result" id="totalCount"></span>
+						<div class="f-content">
+							<div id="pagination1" class="page fl"></div>
+							<div class="info fl">
+								<p>
+									当前页数：<span id="current1">1</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 处理中部分 -->
+				<div class="now-handle" style="display: none;">
+					<div class="search-area clearFix">
+						<input placeholder="搜索企业名称" class="" /> <input placeholder="录单日期"
+							class="" /> <span class="public-bottom2">查询</span>
+					</div>
+					<div class="table-area">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<th>单号</th>
+								<th>录单日期</th>
+								<th>接单时间</th>
+								<th>企业客户</th>
+								<th>用工工种</th>
+								<th>用工总人数</th>
+								<th>状态</th>
+								<th>录单人员</th>
+								<th>操作人员</th>
+								<th width="120">备注说明</th>
+								<th width="150">操作</th>
+							</tr>
+							<!-- <tr>
+								<td>xx</td>
+								<td>2018-08-03 13：:0</td>
+								<td>南京</td>
+								<td>发生家乐福建安</td>
+								<td>333</td>
+								<td>未签约</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td>备注说明</td>
+								<td><span class="des">详情</span><span class="jiedan">签约</span><span
+									class="delete ">关单</span></td>
+							</tr> -->
+						</table>
+					</div>
+
+					<!-- 分页处理部分 -->
+					<div class="public-fanye">
+						<span class="result">103个结果</span>
+						<div class="f-content">
+							<div id="pagination1" class="page fl"></div>
+							<div class="info fl">
+								<p>
+									当前页数：<span id="current1">1</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 已签单 -->
+				<div class="already-handle" style="display: none;">
+					<div class="search-area clearFix">
+						<input placeholder="搜索企业名称" class="" /> <input placeholder="录单日期"
+							class="" /> <span class="public-bottom2">查询</span>
+					</div>
+					<div class="table-area">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<th>单号</th>
+								<th>签约日期</th>
+								<th>企业客户</th>
+								<th>收入总金额（元）</th>
+								<th>用工人数</th>
+								<th>已签人数</th>
+								<th>操作人员</th>
+								<th>状态</th>
+
+								<th width="150">操作</th>
+							</tr>
+							<tr>
+								<td>xx</td>
+								<td>2018-08-03 13：:0</td>
+								<td>南京</td>
+								<td>发生家乐福建安</td>
+								<td>333</td>
+								<td>未签约</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td><span class="des">详情</span><span class="jiedan">关单</span></td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- 分页处理部分 -->
+					<div class="public-fanye">
+						<span class="result">103个结果</span>
+						<div class="f-content">
+							<div id="pagination1" class="page fl"></div>
+							<div class="info fl">
+								<p>
+									当前页数：<span id="current1">1</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 已结束 -->
+				<div class="over-handle" style="display: none;">
+					<div class="search-area clearFix">
+						<input placeholder="搜索企业名称" class="" /> <input placeholder="关单日期"
+							class="" /> <span class="public-bottom2">查询</span>
+					</div>
+					<div class="table-area">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<th>单号</th>
+								<th>录单日期</th>
+								<th>关单时间</th>
+								<th>企业客户</th>
+								<th>用工工种</th>
+								<th>用工人数</th>
+								<th>已签约人数</th>
+								<th>状态</th>
+								<th>录单人员</th>
+								<th>操作人员</th>
+								<th>关单说明</th>
+								<th width="80">操作</th>
+							</tr>
+							<tr>
+								<td>xx</td>
+								<td>2018-08-03 13：:0</td>
+								<td>2018-098-88</td>
+								<td>南京</td>
+								<td>发生家乐福建安</td>
+								<td>333</td>
+								<td>未签约</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td>张三</td>
+								<td><span class="des">详情</span></td>
+							</tr>
+						</table>
+					</div>
+
+					<!-- 分页处理部分 -->
+					<div class="public-fanye">
+						<span class="result">103个结果</span>
+						<div class="f-content">
+							<div id="pagination1" class="page fl"></div>
+							<div class="info fl">
+								<p>
+									当前页数：<span id="current1">1</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<!-- 关单弹框部分 -->
+	<div id="close-demand-dialog" style="display:none;z-index:9">
+		<div class="qiandan-manage-box1">
+			<div class="mask"></div>
+			<div class="box-content">
+				<div class="head">
+					<span class="title">关单原因</span><span class="close fa fa-close" id="close-dialog"></span>
+				</div>
+				<div class="middle">
+					<textarea id="close-demand-textarea" >
+						
+					</textarea>
+				</div>
+				<div class="bottom">
+					<span class="public-bottom1 cancel-dialog" >取消关单</span> 
+					<span class="public-bottom2 on" id="confirm-close-demand">确定关单</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
